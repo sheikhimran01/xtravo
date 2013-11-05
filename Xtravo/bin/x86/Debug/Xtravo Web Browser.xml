@@ -1,0 +1,61 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+XtravoWebBrowser
+</name>
+</assembly>
+<members>
+<member name="M:Xtravo.exBrowser.ShowInternetOptions">
+	<summary>
+ This Will launch the internet option dialog.
+ </summary>
+	<remarks></remarks>
+</member><member name="P:Xtravo.My.Resources.Resources.ResourceManager">
+	<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member><member name="P:Xtravo.My.Resources.Resources.Culture">
+	<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member><member name="P:Xtravo.My.Resources.Resources.AppName">
+	<summary>
+  Looks up a localized string similar to Xtravo.
+</summary>
+</member><member name="P:Xtravo.My.Resources.Resources.Blocked">
+	<summary>
+  Looks up a localized string similar to &lt;html&gt;
+
+&lt;head&gt;
+&lt;title&gt;This site had been blocked.&lt;/title&gt;
+&lt;meta name="generator" content="Namo WebEditor v5.0"&gt;
+&lt;/head&gt;
+
+&lt;body bgcolor="white" text="black" link="blue" vlink="purple" alink="red"&gt;
+&lt;p align="center"&gt;&lt;font size="6"&gt;&lt;em&gt;&lt;font color="#990000" face="Tahoma"&gt;&lt;font color="#333333" face="Calibri"&gt;This Site has been Blocked by You. &lt;/font&gt;&lt;/font&gt;&lt;/em&gt;&lt;/font&gt;&lt;/p&gt;
+&lt;p align="center"&gt;&lt;img src="http://www.jawoco.com/images/jawoco.jpg" width="563" height="85"&gt;&lt;/p&gt;
+&lt;p align="center"&gt;&lt;font face="Ca [rest of string was truncated]";.
+</summary>
+</member><member name="P:Xtravo.My.Resources.Resources.StartPage">
+	<summary>
+  Looks up a localized string similar to &lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;Example Browser - Start Page&lt;/title&gt;
+&lt;/head&gt;
+
+&lt;body bgcolor="white" text="black" link="blue" vlink="purple" alink="red"&gt;
+&lt;p align="center"&gt;&lt;font face="Tahoma" size="4"&gt;&lt;b&gt;Working with the WebBrowser Control 
+in Visual Studio 2005.&lt;br&gt;&lt;/b&gt;&lt;/font&gt;&lt;/p&gt;
+&lt;p align="center"&gt;&lt;font face="Tahoma" size="2"&gt;&lt;b&gt;1st&lt;/b&gt;&lt;/font&gt;&lt;font face="Tahoma"&gt;&lt;b&gt;: &lt;/b&gt;&lt;/font&gt;&lt;font face="Tahoma" size="2"&gt;&lt;b&gt;Please 
+vote for this example on the site you found it on if you find it useful.&lt;/b&gt;&lt;/font&gt;&lt;/p&gt;
+&lt;p  [rest of string was truncated]";.
+</summary>
+</member><member name="T:Xtravo.My.Resources.Resources">
+	<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+</members>
+</doc>

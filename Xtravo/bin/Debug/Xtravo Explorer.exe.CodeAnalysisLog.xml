@@ -1,0 +1,1396 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="c:\program files (x86)\microsoft visual studio 10.0\team tools\static analysis tools\fxcop\Xml\CodeAnalysisReport.xsl"?>
+<FxCopReport Version="10.0">
+ <Targets>
+  <Target Name="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\bin\x86\Debug\Xtravo Web Browser.exe">
+   <Modules>
+    <Module Name="xtravo web browser.exe">
+     <Namespaces>
+      <Namespace Name="Xtravo">
+       <Types>
+        <Type Name="AppManager" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#AddTab(System.Windows.Forms.Form,System.String)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotIndirectlyExposeMethodsWithLinkDemands" Category="Microsoft.Security" CheckId="CA2122" Status="Active" Created="2011-04-16 21:46:51Z" FixCategory="NonBreaking">
+             <Issue Certainty="33" Level="CriticalError" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\ClassFiles" File="AppManager.vb" Line="36">'AppManager.AddTab(Form, String)' calls into 'WebBrowser.GoHome()' which has a LinkDemand. By making this call, 'WebBrowser.GoHome()' is indirectly exposed to user code. Review the following call stack that might expose a way to circumvent security protection: &#xD;&#xA;   -&gt;'AppManager.AddTab(Form, String)'&#xD;&#xA;   -&gt;'AppManager.AddTab(Form, String)'</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#AddTab(Xtravo.TabPage,System.String)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotIndirectlyExposeMethodsWithLinkDemands" Category="Microsoft.Security" CheckId="CA2122" Status="Active" Created="2011-04-16 21:46:51Z" FixCategory="NonBreaking">
+             <Issue Certainty="33" Level="CriticalError" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\ClassFiles" File="AppManager.vb" Line="45">'AppManager.AddTab(TabPage, String)' calls into 'WebBrowser.GoHome()' which has a LinkDemand. By making this call, 'WebBrowser.GoHome()' is indirectly exposed to user code. Review the following call stack that might expose a way to circumvent security protection: &#xD;&#xA;   -&gt;'AppManager.AddTab(TabPage, String)'&#xD;&#xA;   -&gt;'AppManager.AddTab(TabPage, String)'</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#DetectFeeds()" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotIndirectlyExposeMethodsWithLinkDemands" Category="Microsoft.Security" CheckId="CA2122" Status="Active" Created="2011-04-16 21:46:51Z" FixCategory="NonBreaking">
+             <Issue Certainty="33" Level="CriticalError" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\ClassFiles" File="AppManager.vb" Line="170">'AppManager.DetectFeeds()' calls into 'HtmlDocument.All.Get()' which has a LinkDemand. By making this call, 'HtmlDocument.All.Get()' is indirectly exposed to user code. Review the following call stack that might expose a way to circumvent security protection: &#xD;&#xA;   -&gt;'AppManager.DetectFeeds()'&#xD;&#xA;   -&gt;'AppManager.DetectFeeds()'</Issue>
+             <Issue Certainty="33" Level="CriticalError" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\ClassFiles" File="AppManager.vb" Line="170">'AppManager.DetectFeeds()' calls into 'HtmlElement.GetAttribute(String)' which has a LinkDemand. By making this call, 'HtmlElement.GetAttribute(String)' is indirectly exposed to user code. Review the following call stack that might expose a way to circumvent security protection: &#xD;&#xA;   -&gt;'AppManager.DetectFeeds()'&#xD;&#xA;   -&gt;'AppManager.DetectFeeds()'</Issue>
+             <Issue Certainty="33" Level="CriticalError" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\ClassFiles" File="AppManager.vb" Line="170">'AppManager.DetectFeeds()' calls into 'WebBrowser.Document.Get()' which has a LinkDemand. By making this call, 'WebBrowser.Document.Get()' is indirectly exposed to user code. Review the following call stack that might expose a way to circumvent security protection: &#xD;&#xA;   -&gt;'AppManager.DetectFeeds()'&#xD;&#xA;   -&gt;'AppManager.DetectFeeds()'</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GetFavIcon(System.String)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2011-04-16 21:46:51Z" FixCategory="DependsOnFix">
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\ClassFiles" File="AppManager.vb" Line="99">In method 'AppManager.GetFavIcon(String)', call System.IDisposable.Dispose on object 'objIcon' before all references to it are out of scope.</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\ClassFiles" File="AppManager.vb" Line="98">In method 'AppManager.GetFavIcon(String)', call System.IDisposable.Dispose on object 'objwebClient' before all references to it are out of scope.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GetWebImage(System.String)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2011-04-16 21:46:51Z" FixCategory="DependsOnFix">
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\ClassFiles" File="AppManager.vb" Line="75">In method 'AppManager.GetWebImage(String)', call System.IDisposable.Dispose on object 'objImage' before all references to it are out of scope.</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\ClassFiles" File="AppManager.vb" Line="74">In method 'AppManager.GetWebImage(String)', call System.IDisposable.Dispose on object 'objwebClient' before all references to it are out of scope.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#LoadWebImageToPictureBox(System.Windows.Forms.PictureBox,System.String)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2011-04-16 21:46:51Z" FixCategory="DependsOnFix">
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\ClassFiles" File="AppManager.vb" Line="124">In method 'AppManager.LoadWebImageToPictureBox(PictureBox, String)', call System.IDisposable.Dispose on object 'objImage' before all references to it are out of scope.</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\ClassFiles" File="AppManager.vb" Line="123">In method 'AppManager.LoadWebImageToPictureBox(PictureBox, String)', call System.IDisposable.Dispose on object 'objwebClient' before all references to it are out of scope.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Navigate(System.String)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotIndirectlyExposeMethodsWithLinkDemands" Category="Microsoft.Security" CheckId="CA2122" Status="Active" Created="2011-04-16 21:46:51Z" FixCategory="NonBreaking">
+             <Issue Certainty="33" Level="CriticalError" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\ClassFiles" File="AppManager.vb" Line="54">'AppManager.Navigate(String)' calls into 'WebBrowser.Navigate(String)' which has a LinkDemand. By making this call, 'WebBrowser.Navigate(String)' is indirectly exposed to user code. Review the following call stack that might expose a way to circumvent security protection: &#xD;&#xA;   -&gt;'AppManager.Navigate(String)'&#xD;&#xA;   -&gt;'AppManager.Navigate(String)'</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#ShellandWait(System.String)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2011-04-16 21:46:51Z" FixCategory="DependsOnFix">
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\ClassFiles" File="AppManager.vb" Line="155">In method 'AppManager.ShellandWait(String)', call System.IDisposable.Dispose on object 'objProcess' before all references to it are out of scope.</Issue>
+            </Message>
+            <Message TypeName="DoNotIndirectlyExposeMethodsWithLinkDemands" Category="Microsoft.Security" CheckId="CA2122" Status="Active" Created="2011-04-16 21:46:51Z" FixCategory="NonBreaking">
+             <Issue Certainty="33" Level="CriticalError" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\ClassFiles" File="AppManager.vb" Line="152">'AppManager.ShellandWait(String)' calls into 'Process.Close()' which has a LinkDemand. By making this call, 'Process.Close()' is indirectly exposed to user code. Review the following call stack that might expose a way to circumvent security protection: &#xD;&#xA;   -&gt;'AppManager.ShellandWait(String)'&#xD;&#xA;   -&gt;'AppManager.ShellandWait(String)'</Issue>
+             <Issue Certainty="33" Level="CriticalError" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\ClassFiles" File="AppManager.vb" Line="152">'AppManager.ShellandWait(String)' calls into 'Process.Start()' which has a LinkDemand. By making this call, 'Process.Start()' is indirectly exposed to user code. Review the following call stack that might expose a way to circumvent security protection: &#xD;&#xA;   -&gt;'AppManager.ShellandWait(String)'&#xD;&#xA;   -&gt;'AppManager.ShellandWait(String)'</Issue>
+             <Issue Certainty="33" Level="CriticalError" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\ClassFiles" File="AppManager.vb" Line="152">'AppManager.ShellandWait(String)' calls into 'Process.StartInfo.Get()' which has a LinkDemand. By making this call, 'Process.StartInfo.Get()' is indirectly exposed to user code. Review the following call stack that might expose a way to circumvent security protection: &#xD;&#xA;   -&gt;'AppManager.ShellandWait(String)'&#xD;&#xA;   -&gt;'AppManager.ShellandWait(String)'</Issue>
+             <Issue Certainty="33" Level="CriticalError" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\ClassFiles" File="AppManager.vb" Line="152">'AppManager.ShellandWait(String)' calls into 'Process.WaitForExit()' which has a LinkDemand. By making this call, 'Process.WaitForExit()' is indirectly exposed to user code. Review the following call stack that might expose a way to circumvent security protection: &#xD;&#xA;   -&gt;'AppManager.ShellandWait(String)'&#xD;&#xA;   -&gt;'AppManager.ShellandWait(String)'</Issue>
+             <Issue Certainty="33" Level="CriticalError" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\ClassFiles" File="AppManager.vb" Line="152">'AppManager.ShellandWait(String)' calls into 'ProcessStartInfo.FileName.Set(String)' which has a LinkDemand. By making this call, 'ProcessStartInfo.FileName.Set(String)' is indirectly exposed to user code. Review the following call stack that might expose a way to circumvent security protection: &#xD;&#xA;   -&gt;'AppManager.ShellandWait(String)'&#xD;&#xA;   -&gt;'AppManager.ShellandWait(String)'</Issue>
+             <Issue Certainty="33" Level="CriticalError" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\ClassFiles" File="AppManager.vb" Line="152">'AppManager.ShellandWait(String)' calls into 'ProcessStartInfo.WindowStyle.Set(ProcessWindowStyle)' which has a LinkDemand. By making this call, 'ProcessStartInfo.WindowStyle.Set(ProcessWindowStyle)' is indirectly exposed to user code. Review the following call stack that might expose a way to circumvent security protection: &#xD;&#xA;   -&gt;'AppManager.ShellandWait(String)'&#xD;&#xA;   -&gt;'AppManager.ShellandWait(String)'</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="CapBrowser" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#BitBlt(System.IntPtr,System.Int32,System.Int32,System.Int32,System.Int32,System.IntPtr,System.Int32,System.Int32,System.Int32)" Kind="Method" Static="True" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2011-04-16 21:46:51Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalWarning">Because it is a P/Invoke method, 'CapBrowser.BitBlt(IntPtr, Integer, Integer, Integer, Integer, IntPtr, Integer, Integer, Integer)' should be defined in a class named NativeMethods, SafeNativeMethods, or UnsafeNativeMethods.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GetImage(Xtravo.frmBrowser)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2011-04-16 21:46:51Z" FixCategory="DependsOnFix">
+             <Issue Name="ExceptionEdge" Certainty="75" Level="Warning" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\User Controls" File="CapBrowser.vb" Line="22">In method 'CapBrowser.GetImage(frmBrowser)', object 'MyImage' is not disposed along all exception paths. Call System.IDisposable.Dispose on object 'MyImage' before all references to it are out of scope.</Issue>
+            </Message>
+            <Message TypeName="DoNotIndirectlyExposeMethodsWithLinkDemands" Category="Microsoft.Security" CheckId="CA2122" Status="Active" Created="2011-04-16 21:46:51Z" FixCategory="NonBreaking">
+             <Issue Certainty="33" Level="CriticalError" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\User Controls" File="CapBrowser.vb" Line="20">'CapBrowser.GetImage(frmBrowser)' calls into 'Graphics.GetHdc()' which has a LinkDemand. By making this call, 'Graphics.GetHdc()' is indirectly exposed to user code. Review the following call stack that might expose a way to circumvent security protection: &#xD;&#xA;   -&gt;'CapBrowser.GetImage(frmBrowser)'&#xD;&#xA;   -&gt;'CapBrowser.GetImage(frmBrowser)'</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="Class1" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#DeleteUrlCacheEntry(System.IntPtr)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2011-04-16 21:46:51Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalWarning">Because it is a P/Invoke method, 'Class1.DeleteUrlCacheEntry(IntPtr)' should be defined in a class named NativeMethods, SafeNativeMethods, or UnsafeNativeMethods.</Issue>
+            </Message>
+            <Message TypeName="PInvokesShouldNotBeVisible" Category="Microsoft.Interoperability" CheckId="CA1401" Status="Active" Created="2011-04-16 21:46:51Z" FixCategory="Breaking">
+             <Issue Certainty="50" Level="CriticalError">Change the accessibility of P/Invoke 'Class1.DeleteUrlCacheEntry(IntPtr)' so that it is no longer visible from outside its assembly.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#DeleteUrlCacheGroup(System.Int64,System.Int32,System.IntPtr)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2011-04-16 21:46:51Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalWarning">Because it is a P/Invoke method, 'Class1.DeleteUrlCacheGroup(Long, Integer, IntPtr)' should be defined in a class named NativeMethods, SafeNativeMethods, or UnsafeNativeMethods.</Issue>
+            </Message>
+            <Message TypeName="PInvokesShouldNotBeVisible" Category="Microsoft.Interoperability" CheckId="CA1401" Status="Active" Created="2011-04-16 21:46:51Z" FixCategory="Breaking">
+             <Issue Certainty="50" Level="CriticalError">Change the accessibility of P/Invoke 'Class1.DeleteUrlCacheGroup(Long, Integer, IntPtr)' so that it is no longer visible from outside its assembly.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#FileTimeToLocalFileTime(Xtravo.Class1+FILETIME&amp;,Xtravo.Class1+FILETIME&amp;)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2011-04-16 21:46:51Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalWarning">Because it is a P/Invoke method, 'Class1.FileTimeToLocalFileTime(ByRef Class1.FILETIME, ByRef Class1.FILETIME)' should be defined in a class named NativeMethods, SafeNativeMethods, or UnsafeNativeMethods.</Issue>
+            </Message>
+            <Message TypeName="PInvokesShouldNotBeVisible" Category="Microsoft.Interoperability" CheckId="CA1401" Status="Active" Created="2011-04-16 21:46:51Z" FixCategory="Breaking">
+             <Issue Certainty="50" Level="CriticalError">Change the accessibility of P/Invoke 'Class1.FileTimeToLocalFileTime(ByRef Class1.FILETIME, ByRef Class1.FILETIME)' so that it is no longer visible from outside its assembly.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#FileTimeToSystemTime(Xtravo.Class1+FILETIME&amp;,Xtravo.Class1+SYSTEMTIME&amp;)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2011-04-16 21:46:51Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalWarning">Because it is a P/Invoke method, 'Class1.FileTimeToSystemTime(ByRef Class1.FILETIME, ByRef Class1.SYSTEMTIME)' should be defined in a class named NativeMethods, SafeNativeMethods, or UnsafeNativeMethods.</Issue>
+            </Message>
+            <Message TypeName="PInvokesShouldNotBeVisible" Category="Microsoft.Interoperability" CheckId="CA1401" Status="Active" Created="2011-04-16 21:46:51Z" FixCategory="Breaking">
+             <Issue Certainty="50" Level="CriticalError">Change the accessibility of P/Invoke 'Class1.FileTimeToSystemTime(ByRef Class1.FILETIME, ByRef Class1.SYSTEMTIME)' so that it is no longer visible from outside its assembly.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#FindFirstUrlCacheEntry(System.String,System.IntPtr,System.Int32&amp;)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2011-04-16 21:46:51Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalWarning">Because it is a P/Invoke method, 'Class1.FindFirstUrlCacheEntry(String, IntPtr, ByRef Integer)' should be defined in a class named NativeMethods, SafeNativeMethods, or UnsafeNativeMethods.</Issue>
+            </Message>
+            <Message TypeName="PInvokesShouldNotBeVisible" Category="Microsoft.Interoperability" CheckId="CA1401" Status="Active" Created="2011-04-16 21:46:51Z" FixCategory="Breaking">
+             <Issue Certainty="50" Level="CriticalError">Change the accessibility of P/Invoke 'Class1.FindFirstUrlCacheEntry(String, IntPtr, ByRef Integer)' so that it is no longer visible from outside its assembly.</Issue>
+            </Message>
+            <Message Id="0" TypeName="SpecifyMarshalingForPInvokeStringArguments" Category="Microsoft.Globalization" CheckId="CA2101" Status="Active" Created="2011-04-16 21:46:51Z" FixCategory="NonBreaking">
+             <Issue Name="Parameter" Certainty="75" Level="Error">To reduce security risk, marshal parameter 'lpszUrlSearchPattern' as Unicode, by setting DllImport.CharSet to CharSet.Unicode, or by explicitly marshaling the parameter as UnmanagedType.LPWStr. If you need to marshal this string as ANSI or system-dependent, set BestFitMapping=false; for added security, also set ThrowOnUnmappableChar=true.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#FindFirstUrlCacheGroup(System.Int32,System.Int32,System.IntPtr,System.Int32,System.Int64&amp;,System.IntPtr)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2011-04-16 21:46:51Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalWarning">Because it is a P/Invoke method, 'Class1.FindFirstUrlCacheGroup(Integer, Integer, IntPtr, Integer, ByRef Long, IntPtr)' should be defined in a class named NativeMethods, SafeNativeMethods, or UnsafeNativeMethods.</Issue>
+            </Message>
+            <Message TypeName="PInvokesShouldNotBeVisible" Category="Microsoft.Interoperability" CheckId="CA1401" Status="Active" Created="2011-04-16 21:46:51Z" FixCategory="Breaking">
+             <Issue Certainty="50" Level="CriticalError">Change the accessibility of P/Invoke 'Class1.FindFirstUrlCacheGroup(Integer, Integer, IntPtr, Integer, ByRef Long, IntPtr)' so that it is no longer visible from outside its assembly.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#FindNextUrlCacheEntry(System.IntPtr,System.IntPtr,System.Int32&amp;)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2011-04-16 21:46:51Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalWarning">Because it is a P/Invoke method, 'Class1.FindNextUrlCacheEntry(IntPtr, IntPtr, ByRef Integer)' should be defined in a class named NativeMethods, SafeNativeMethods, or UnsafeNativeMethods.</Issue>
+            </Message>
+            <Message TypeName="PInvokesShouldNotBeVisible" Category="Microsoft.Interoperability" CheckId="CA1401" Status="Active" Created="2011-04-16 21:46:51Z" FixCategory="Breaking">
+             <Issue Certainty="50" Level="CriticalError">Change the accessibility of P/Invoke 'Class1.FindNextUrlCacheEntry(IntPtr, IntPtr, ByRef Integer)' so that it is no longer visible from outside its assembly.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#FindNextUrlCacheGroup(System.IntPtr,System.Int64&amp;,System.IntPtr)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2011-04-16 21:46:51Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalWarning">Because it is a P/Invoke method, 'Class1.FindNextUrlCacheGroup(IntPtr, ByRef Long, IntPtr)' should be defined in a class named NativeMethods, SafeNativeMethods, or UnsafeNativeMethods.</Issue>
+            </Message>
+            <Message TypeName="PInvokesShouldNotBeVisible" Category="Microsoft.Interoperability" CheckId="CA1401" Status="Active" Created="2011-04-16 21:46:51Z" FixCategory="Breaking">
+             <Issue Certainty="50" Level="CriticalError">Change the accessibility of P/Invoke 'Class1.FindNextUrlCacheGroup(IntPtr, ByRef Long, IntPtr)' so that it is no longer visible from outside its assembly.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="Class1+INTERNET_CACHE_ENTRY_INFOA" Kind="Struct" Accessibility="Public" ExternallyVisible="True">
+         <Messages>
+          <Message Id="CacheEntryType" TypeName="ValueTypeFieldsShouldBePortable" Category="Microsoft.Portability" CheckId="CA1900" Status="Active" Created="2011-04-16 21:46:51Z" FixCategory="Breaking">
+           <Issue Certainty="95" Level="CriticalError">Structure 'Class1.INTERNET_CACHE_ENTRY_INFOA' contains the following non-portable fields: 'Class1.INTERNET_CACHE_ENTRY_INFOA.CacheEntryType'.</Issue>
+          </Message>
+          <Message Id="dwExemptDelta" TypeName="ValueTypeFieldsShouldBePortable" Category="Microsoft.Portability" CheckId="CA1900" Status="Active" Created="2011-04-16 21:46:51Z" FixCategory="Breaking">
+           <Issue Certainty="95" Level="CriticalError">Structure 'Class1.INTERNET_CACHE_ENTRY_INFOA' contains the following non-portable fields: 'Class1.INTERNET_CACHE_ENTRY_INFOA.dwExemptDelta'.</Issue>
+          </Message>
+          <Message Id="dwHeaderInfoSize" TypeName="ValueTypeFieldsShouldBePortable" Category="Microsoft.Portability" CheckId="CA1900" Status="Active" Created="2011-04-16 21:46:51Z" FixCategory="Breaking">
+           <Issue Certainty="95" Level="CriticalError">Structure 'Class1.INTERNET_CACHE_ENTRY_INFOA' contains the following non-portable fields: 'Class1.INTERNET_CACHE_ENTRY_INFOA.dwHeaderInfoSize'.</Issue>
+          </Message>
+          <Message Id="dwReserved" TypeName="ValueTypeFieldsShouldBePortable" Category="Microsoft.Portability" CheckId="CA1900" Status="Active" Created="2011-04-16 21:46:51Z" FixCategory="Breaking">
+           <Issue Certainty="95" Level="CriticalError">Structure 'Class1.INTERNET_CACHE_ENTRY_INFOA' contains the following non-portable fields: 'Class1.INTERNET_CACHE_ENTRY_INFOA.dwReserved'.</Issue>
+          </Message>
+          <Message Id="lpszLocalFileName" TypeName="ValueTypeFieldsShouldBePortable" Category="Microsoft.Portability" CheckId="CA1900" Status="Active" Created="2011-04-16 21:46:51Z" FixCategory="Breaking">
+           <Issue Certainty="95" Level="CriticalError">Structure 'Class1.INTERNET_CACHE_ENTRY_INFOA' contains the following non-portable fields: 'Class1.INTERNET_CACHE_ENTRY_INFOA.lpszLocalFileName'.</Issue>
+          </Message>
+          <Message Id="lpszSourceUrlName" TypeName="ValueTypeFieldsShouldBePortable" Category="Microsoft.Portability" CheckId="CA1900" Status="Active" Created="2011-04-16 21:46:51Z" FixCategory="Breaking">
+           <Issue Certainty="95" Level="CriticalError">Structure 'Class1.INTERNET_CACHE_ENTRY_INFOA' contains the following non-portable fields: 'Class1.INTERNET_CACHE_ENTRY_INFOA.lpszSourceUrlName'.</Issue>
+          </Message>
+         </Messages>
+         <Members>
+          <Member Name="#lpHeaderInfo" Kind="Field" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="PointersShouldNotBeVisible" Category="Microsoft.Security" CheckId="CA2111" Status="Active" Created="2011-04-16 21:46:51Z" FixCategory="Breaking">
+             <Issue Certainty="75" Level="CriticalError">Make 'Class1.INTERNET_CACHE_ENTRY_INFOA.lpHeaderInfo' private.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#lpszFileExtension" Kind="Field" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="PointersShouldNotBeVisible" Category="Microsoft.Security" CheckId="CA2111" Status="Active" Created="2011-04-16 21:46:51Z" FixCategory="Breaking">
+             <Issue Certainty="75" Level="CriticalError">Make 'Class1.INTERNET_CACHE_ENTRY_INFOA.lpszFileExtension' private.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#lpszLocalFileName" Kind="Field" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="PointersShouldNotBeVisible" Category="Microsoft.Security" CheckId="CA2111" Status="Active" Created="2011-04-16 21:46:51Z" FixCategory="Breaking">
+             <Issue Certainty="75" Level="CriticalError">Make 'Class1.INTERNET_CACHE_ENTRY_INFOA.lpszLocalFileName' private.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#lpszSourceUrlName" Kind="Field" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="PointersShouldNotBeVisible" Category="Microsoft.Security" CheckId="CA2111" Status="Active" Created="2011-04-16 21:46:51Z" FixCategory="Breaking">
+             <Issue Certainty="75" Level="CriticalError">Make 'Class1.INTERNET_CACHE_ENTRY_INFOA.lpszSourceUrlName' private.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="ControlButton" Kind="Class" Accessibility="Assembly" ExternallyVisible="False">
+         <Members>
+          <Member Name="#OnPaint(System.Windows.Forms.PaintEventArgs)" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2011-04-16 21:46:51Z" FixCategory="DependsOnFix">
+             <Issue Name="ExceptionEdge" Certainty="75" Level="Warning" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\MDITabs" File="ControlButton.vb" Line="119">In method 'ControlButton.OnPaint(PaintEventArgs)', object 'g' is not disposed along all exception paths. Call System.IDisposable.Dispose on object 'g' before all references to it are out of scope.</Issue>
+             <Issue Name="ExceptionEdge" Certainty="75" Level="Warning" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\MDITabs" File="ControlButton.vb" Line="120">In method 'ControlButton.OnPaint(PaintEventArgs)', object 'm' is not disposed along all exception paths. Call System.IDisposable.Dispose on object 'm' before all references to it are out of scope.</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\MDITabs" File="ControlButton.vb" Line="115">In method 'ControlButton.OnPaint(PaintEventArgs)', call System.IDisposable.Dispose on object 'New LinearGradientBrush(..., ..., Helper.RenderColors.ControlButtonBackHighColor(Me.m_RenderMode, Me.m_BackHighColor), Helper.RenderColors.ControlButtonBackLowColor(Me.m_RenderMode, Me.m_BackLowColor))' before all references to it are out of scope.</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\MDITabs" File="ControlButton.vb" Line="116">In method 'ControlButton.OnPaint(PaintEventArgs)', call System.IDisposable.Dispose on object 'New Pen(Helper.RenderColors.ControlButtonBorderColor(Me.m_RenderMode, Me.m_BorderColor))' before all references to it are out of scope.</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\MDITabs" File="ControlButton.vb" Line="133">In method 'ControlButton.OnPaint(PaintEventArgs)', call System.IDisposable.Dispose on object 'New Pen(Me.ForeColor)' before all references to it are out of scope.</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\MDITabs" File="ControlButton.vb" Line="124">In method 'ControlButton.OnPaint(PaintEventArgs)', call System.IDisposable.Dispose on object 'New SolidBrush(Me.ForeColor)' before all references to it are out of scope.</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\MDITabs" File="ControlButton.vb" Line="128">In method 'ControlButton.OnPaint(PaintEventArgs)', call System.IDisposable.Dispose on object 'New SolidBrush(Me.ForeColor)' before all references to it are out of scope.</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\MDITabs" File="ControlButton.vb" Line="134">In method 'ControlButton.OnPaint(PaintEventArgs)', call System.IDisposable.Dispose on object 'New SolidBrush(Me.ForeColor)' before all references to it are out of scope.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="exBrowser" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#ShowOpen()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2011-04-16 21:46:51Z" FixCategory="DependsOnFix">
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\ClassFiles" File="exBrowser.vb" Line="111">In method 'exBrowser.ShowOpen()', call System.IDisposable.Dispose on object 'cdlOpen' before all references to it are out of scope.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="exBrowser+WebBrowserNavigatingExtendedEventArgs" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Messages>
+          <Message TypeName="ComVisibleTypeBaseTypesShouldBeComVisible" Category="Microsoft.Interoperability" CheckId="CA1405" Status="Active" Created="2011-04-16 21:46:51Z" FixCategory="DependsOnFix">
+           <Issue Certainty="90" Level="Error">'exBrowser.WebBrowserNavigatingExtendedEventArgs' is marked ComVisible(true) but has the following ComVisible(false) types in its object hierarchy: 'CancelEventArgs'</Issue>
+          </Message>
+         </Messages>
+        </Type>
+        <Type Name="exBrowser+WebBrowserNewWindowExtendedEventArgs" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Messages>
+          <Message TypeName="ComVisibleTypeBaseTypesShouldBeComVisible" Category="Microsoft.Interoperability" CheckId="CA1405" Status="Active" Created="2011-04-16 21:46:51Z" FixCategory="DependsOnFix">
+           <Issue Certainty="90" Level="Error">'exBrowser.WebBrowserNewWindowExtendedEventArgs' is marked ComVisible(true) but has the following ComVisible(false) types in its object hierarchy: 'CancelEventArgs'</Issue>
+          </Message>
+         </Messages>
+        </Type>
+        <Type Name="frmAddRSS" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#AddFeed()" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2011-04-16 21:46:51Z" FixCategory="DependsOnFix">
+             <Issue Name="ExceptionEdge" Certainty="75" Level="Warning" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\Forms" File="frmAddRSS.vb" Line="124">In method 'frmAddRSS.AddFeed()', object 'oConn' is not disposed along all exception paths. Call System.IDisposable.Dispose on object 'oConn' before all references to it are out of scope.</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\Forms" File="frmAddRSS.vb" Line="135">In method 'frmAddRSS.AddFeed()', call System.IDisposable.Dispose on object 'ofrm' before all references to it are out of scope.</Issue>
+            </Message>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2011-04-16 21:46:51Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\Forms" File="frmAddRSS.vb" Line="139">Object 'oConn' can be disposed more than once in method 'frmAddRSS.AddFeed()'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 139</Issue>
+            </Message>
+            <Message TypeName="Review SQL queries for security vulnerabilities" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2011-04-16 21:46:51Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\Forms" File="frmAddRSS.vb" Line="125">The query string passed to 'OleDbCommand.New(String, OleDbConnection)' in 'frmAddRSS.AddFeed()' could contain the following variables 'Conversions.ToString(Conversions.ToInteger(li.Value))', 'New String(7)(3)', 'New String(7)(5)'. If any of these variables could come from user input, consider using a stored procedure or a parameterized SQL query instead of building the query with string concatenations.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#AddGroup()" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2011-04-16 21:46:51Z" FixCategory="DependsOnFix">
+             <Issue Name="ExceptionEdge" Certainty="75" Level="Warning" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\Forms" File="frmAddRSS.vb" Line="148">In method 'frmAddRSS.AddGroup()', object 'oConn' is not disposed along all exception paths. Call System.IDisposable.Dispose on object 'oConn' before all references to it are out of scope.</Issue>
+            </Message>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2011-04-16 21:46:51Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\Forms" File="frmAddRSS.vb" Line="159">Object 'oConn' can be disposed more than once in method 'frmAddRSS.AddGroup()'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 159</Issue>
+            </Message>
+            <Message TypeName="Review SQL queries for security vulnerabilities" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2011-04-16 21:46:51Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\Forms" File="frmAddRSS.vb" Line="149">The query string passed to 'OleDbCommand.New(String, OleDbConnection)' in 'frmAddRSS.AddGroup()' could contain the following variables 'Conversions.ToString(Conversions.ToInteger(li.Value))', 'New String(5)(3)'. If any of these variables could come from user input, consider using a stored procedure or a parameterized SQL query instead of building the query with string concatenations.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GetChildren(System.Int32,System.Data.DataTable)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2011-04-16 21:46:51Z" FixCategory="DependsOnFix">
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\Forms" File="frmAddRSS.vb" Line="56">In method 'frmAddRSS.GetChildren(Integer, DataTable)', call System.IDisposable.Dispose on object 'dv' before all references to it are out of scope.</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\Forms" File="frmAddRSS.vb" Line="69">In method 'frmAddRSS.GetChildren(Integer, DataTable)', call System.IDisposable.Dispose on object 'ofrm' before all references to it are out of scope.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#LoadFromDB()" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2011-04-16 21:46:51Z" FixCategory="DependsOnFix">
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\Forms" File="frmAddRSS.vb" Line="30">In method 'frmAddRSS.LoadFromDB()', call System.IDisposable.Dispose on object 'dt' before all references to it are out of scope.</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\Forms" File="frmAddRSS.vb" Line="28">In method 'frmAddRSS.LoadFromDB()', call System.IDisposable.Dispose on object 'oConn' before all references to it are out of scope.</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\Forms" File="frmAddRSS.vb" Line="29">In method 'frmAddRSS.LoadFromDB()', call System.IDisposable.Dispose on object 'oDa' before all references to it are out of scope.</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\Forms" File="frmAddRSS.vb" Line="49">In method 'frmAddRSS.LoadFromDB()', call System.IDisposable.Dispose on object 'ofrm' before all references to it are out of scope.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="frmBrowser" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Messages>
+          <Message TypeName="SecuredTypesShouldNotExposeFields" Category="Microsoft.Security" CheckId="CA2112" Status="Active" Created="2011-04-16 21:46:51Z" FixCategory="Breaking">
+           <Issue Certainty="75" Level="CriticalError">'frmBrowser' has a LinkDemand or Demand, and exposes the field 'frmBrowser.NumFeeds'. Fields cannot be protected by LinkDemands or Demands. To remove this vulnerability, make the field private and expose a property that has security applied to it.</Issue>
+          </Message>
+         </Messages>
+         <Members>
+          <Member Name="#mnuImageCopy_Click(System.Object,System.EventArgs)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2011-04-16 21:46:51Z" FixCategory="DependsOnFix">
+             <Issue Name="ExceptionEdge" Certainty="75" Level="Warning" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\Forms" File="frmBrowser.vb" Line="423">In method 'frmBrowser.mnuImageCopy_Click(Object, EventArgs)', object 'opb' is not disposed along all exception paths. Call System.IDisposable.Dispose on object 'opb' before all references to it are out of scope.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#mnuImageSave_Click(System.Object,System.EventArgs)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2011-04-16 21:46:51Z" FixCategory="DependsOnFix">
+             <Issue Name="ExceptionEdge" Certainty="75" Level="Warning" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\Forms" File="frmBrowser.vb" Line="311">In method 'frmBrowser.mnuImageSave_Click(Object, EventArgs)', object 'opb' is not disposed along all exception paths. Call System.IDisposable.Dispose on object 'opb' before all references to it are out of scope.</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\Forms" File="frmBrowser.vb" Line="350">In method 'frmBrowser.mnuImageSave_Click(Object, EventArgs)', call System.IDisposable.Dispose on object 'ofrm' before all references to it are out of scope.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#mnuPopMoreSettings_Click(System.Object,System.EventArgs)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2011-04-16 21:46:51Z" FixCategory="DependsOnFix">
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\Forms" File="frmBrowser.vb" Line="455">In method 'frmBrowser.mnuPopMoreSettings_Click(Object, EventArgs)', call System.IDisposable.Dispose on object 'ofrm' before all references to it are out of scope.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#mnuPopTempAllow_Click(System.Object,System.EventArgs)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2011-04-16 21:46:51Z" FixCategory="DependsOnFix">
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\Forms" File="frmBrowser.vb" Line="436">In method 'frmBrowser.mnuPopTempAllow_Click(Object, EventArgs)', call System.IDisposable.Dispose on object 'oFrm' before all references to it are out of scope.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#mnuSaveAllImages_Click(System.Object,System.EventArgs)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2011-04-16 21:46:51Z" FixCategory="DependsOnFix">
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\Forms" File="frmBrowser.vb" Line="471">In method 'frmBrowser.mnuSaveAllImages_Click(Object, EventArgs)', call System.IDisposable.Dispose on object 'ofrm' before all references to it are out of scope.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#mnuViewImageNewTab_Click(System.Object,System.EventArgs)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2011-04-16 21:46:51Z" FixCategory="DependsOnFix">
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\Forms" File="frmBrowser.vb" Line="407">In method 'frmBrowser.mnuViewImageNewTab_Click(Object, EventArgs)', call System.IDisposable.Dispose on object 'ofrm' before all references to it are out of scope.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#oDoc_MouseDown(System.Object,System.Windows.Forms.HtmlElementEventArgs)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2011-04-16 21:46:51Z" FixCategory="DependsOnFix">
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\Forms" File="frmBrowser.vb" Line="125">In method 'frmBrowser.oDoc_MouseDown(Object, HtmlElementEventArgs)', call System.IDisposable.Dispose on object 'ofrm' before all references to it are out of scope.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#OpenInNewTabToolStripMenuItem_Click(System.Object,System.EventArgs)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2011-04-16 21:46:51Z" FixCategory="DependsOnFix">
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\Forms" File="frmBrowser.vb" Line="478">In method 'frmBrowser.OpenInNewTabToolStripMenuItem_Click(Object, EventArgs)', call System.IDisposable.Dispose on object 'ofrm' before all references to it are out of scope.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#RunPhishingFilter()" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2011-04-16 21:46:51Z" FixCategory="DependsOnFix">
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\Forms" File="frmBrowser.vb" Line="270">In method 'frmBrowser.RunPhishingFilter()', call System.IDisposable.Dispose on object 'ofrm' before all references to it are out of scope.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#ShowProps()" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2011-04-16 21:46:51Z" FixCategory="DependsOnFix">
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\Forms" File="frmBrowser.vb" Line="384">In method 'frmBrowser.ShowProps()', call System.IDisposable.Dispose on object 'ofrm' before all references to it are out of scope.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#ShowSettings()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2011-04-16 21:46:51Z" FixCategory="DependsOnFix">
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\Forms" File="frmBrowser.vb" Line="58">In method 'frmBrowser.ShowSettings()', call System.IDisposable.Dispose on object 'ofrm' before all references to it are out of scope.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#wb_NewWindowExtended(System.Object,Xtravo.exBrowser+WebBrowserNewWindowExtendedEventArgs)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2011-04-16 21:46:51Z" FixCategory="DependsOnFix">
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\Forms" File="frmBrowser.vb" Line="195">In method 'frmBrowser.wb_NewWindowExtended(Object, exBrowser.WebBrowserNewWindowExtendedEventArgs)', call System.IDisposable.Dispose on object 'ofrm' before all references to it are out of scope.</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\Forms" File="frmBrowser.vb" Line="204">In method 'frmBrowser.wb_NewWindowExtended(Object, exBrowser.WebBrowserNewWindowExtendedEventArgs)', call System.IDisposable.Dispose on object 'ofrm' before all references to it are out of scope.</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\Forms" File="frmBrowser.vb" Line="221">In method 'frmBrowser.wb_NewWindowExtended(Object, exBrowser.WebBrowserNewWindowExtendedEventArgs)', call System.IDisposable.Dispose on object 'ofrm' before all references to it are out of scope.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="frmcheckupdates" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#InitializeComponent()" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="DoNotIndirectlyExposeMethodsWithLinkDemands" Category="Microsoft.Security" CheckId="CA2122" Status="Active" Created="2011-04-16 21:46:51Z" FixCategory="NonBreaking">
+             <Issue Certainty="33" Level="CriticalError" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\Forms" File="frmcheckupdates.Designer.vb" Line="24">'frmcheckupdates.InitializeComponent()' calls into 'WebBrowser.AllowWebBrowserDrop.Set(Boolean)' which has a LinkDemand. By making this call, 'WebBrowser.AllowWebBrowserDrop.Set(Boolean)' is indirectly exposed to user code. Review the following call stack that might expose a way to circumvent security protection: &#xD;&#xA;   -&gt;'frmcheckupdates.InitializeComponent()'&#xD;&#xA;   -&gt;'frmcheckupdates.InitializeComponent()'&#xD;&#xA;   -&gt;'frmcheckupdates.New()'</Issue>
+             <Issue Certainty="33" Level="CriticalError" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\Forms" File="frmcheckupdates.Designer.vb" Line="24">'frmcheckupdates.InitializeComponent()' calls into 'WebBrowser.IsWebBrowserContextMenuEnabled.Set(Boolean)' which has a LinkDemand. By making this call, 'WebBrowser.IsWebBrowserContextMenuEnabled.Set(Boolean)' is indirectly exposed to user code. Review the following call stack that might expose a way to circumvent security protection: &#xD;&#xA;   -&gt;'frmcheckupdates.InitializeComponent()'&#xD;&#xA;   -&gt;'frmcheckupdates.InitializeComponent()'&#xD;&#xA;   -&gt;'frmcheckupdates.New()'</Issue>
+             <Issue Certainty="33" Level="CriticalError" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\Forms" File="frmcheckupdates.Designer.vb" Line="24">'frmcheckupdates.InitializeComponent()' calls into 'WebBrowser.ScriptErrorsSuppressed.Set(Boolean)' which has a LinkDemand. By making this call, 'WebBrowser.ScriptErrorsSuppressed.Set(Boolean)' is indirectly exposed to user code. Review the following call stack that might expose a way to circumvent security protection: &#xD;&#xA;   -&gt;'frmcheckupdates.InitializeComponent()'&#xD;&#xA;   -&gt;'frmcheckupdates.InitializeComponent()'&#xD;&#xA;   -&gt;'frmcheckupdates.New()'</Issue>
+             <Issue Certainty="33" Level="CriticalError" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\Forms" File="frmcheckupdates.Designer.vb" Line="24">'frmcheckupdates.InitializeComponent()' calls into 'WebBrowser.ScrollBarsEnabled.Set(Boolean)' which has a LinkDemand. By making this call, 'WebBrowser.ScrollBarsEnabled.Set(Boolean)' is indirectly exposed to user code. Review the following call stack that might expose a way to circumvent security protection: &#xD;&#xA;   -&gt;'frmcheckupdates.InitializeComponent()'&#xD;&#xA;   -&gt;'frmcheckupdates.InitializeComponent()'&#xD;&#xA;   -&gt;'frmcheckupdates.New()'</Issue>
+             <Issue Certainty="33" Level="CriticalError" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\Forms" File="frmcheckupdates.Designer.vb" Line="24">'frmcheckupdates.InitializeComponent()' calls into 'WebBrowser.Url.Set(Uri)' which has a LinkDemand. By making this call, 'WebBrowser.Url.Set(Uri)' is indirectly exposed to user code. Review the following call stack that might expose a way to circumvent security protection: &#xD;&#xA;   -&gt;'frmcheckupdates.InitializeComponent()'&#xD;&#xA;   -&gt;'frmcheckupdates.InitializeComponent()'&#xD;&#xA;   -&gt;'frmcheckupdates.New()'</Issue>
+             <Issue Certainty="33" Level="CriticalError" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\Forms" File="frmcheckupdates.Designer.vb" Line="24">'frmcheckupdates.InitializeComponent()' calls into 'WebBrowser.WebBrowserShortcutsEnabled.Set(Boolean)' which has a LinkDemand. By making this call, 'WebBrowser.WebBrowserShortcutsEnabled.Set(Boolean)' is indirectly exposed to user code. Review the following call stack that might expose a way to circumvent security protection: &#xD;&#xA;   -&gt;'frmcheckupdates.InitializeComponent()'&#xD;&#xA;   -&gt;'frmcheckupdates.InitializeComponent()'&#xD;&#xA;   -&gt;'frmcheckupdates.New()'</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="frmCookieViewer" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#btnDeleteALL_Click(System.Object,System.EventArgs)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2011-04-16 21:46:51Z" FixCategory="DependsOnFix">
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\Forms" File="frmCookieViewer.vb" Line="89">In method 'frmCookieViewer.btnDeleteALL_Click(Object, EventArgs)', call System.IDisposable.Dispose on object 'ofrm' before all references to it are out of scope.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#DeleteCookie()" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2011-04-16 21:46:51Z" FixCategory="DependsOnFix">
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\Forms" File="frmCookieViewer.vb" Line="72">In method 'frmCookieViewer.DeleteCookie()', call System.IDisposable.Dispose on object 'ofrm' before all references to it are out of scope.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#ViewCookie(System.Windows.Forms.TreeNode)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2011-04-16 21:46:51Z" FixCategory="DependsOnFix">
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\Forms" File="frmCookieViewer.vb" Line="32">In method 'frmCookieViewer.ViewCookie(TreeNode)', call System.IDisposable.Dispose on object 'ofrm' before all references to it are out of scope.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="frmDetectRSS" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#btnAdd_Click(System.Object,System.EventArgs)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2011-04-16 21:46:51Z" FixCategory="DependsOnFix">
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\Forms" File="frmDetectRSS.vb" Line="31">In method 'frmDetectRSS.btnAdd_Click(Object, EventArgs)', call System.IDisposable.Dispose on object 'ofrm' before all references to it are out of scope.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="frmDocExplorer" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#deWB" Kind="Property" Static="False" Accessibility="Assembly" ExternallyVisible="False">
+           <Accessors>
+            <Accessor Name="#set_deWB(System.Windows.Forms.WebBrowser)" Kind="Method" Static="False" Accessibility="Assembly" ExternallyVisible="False">
+             <Messages>
+              <Message TypeName="DoNotIndirectlyExposeMethodsWithLinkDemands" Category="Microsoft.Security" CheckId="CA2122" Status="Active" Created="2011-04-16 21:46:51Z" FixCategory="NonBreaking">
+               <Issue Certainty="33" Level="CriticalError">'frmDocExplorer.deWB.Set(WebBrowser)' calls into 'WebBrowser.DocumentCompleted.AddHandler(WebBrowserDocumentCompletedEventHandler)' which has a LinkDemand. By making this call, 'WebBrowser.DocumentCompleted.AddHandler(WebBrowserDocumentCompletedEventHandler)' is indirectly exposed to user code. Review the following call stack that might expose a way to circumvent security protection: &#xD;&#xA;   -&gt;'frmDocExplorer.deWB.Set(WebBrowser)'&#xD;&#xA;   -&gt;'frmDocExplorer.deWB.Set(WebBrowser)'&#xD;&#xA;   -&gt;'frmDocExplorer.InitializeComponent()'&#xD;&#xA;   -&gt;'frmDocExplorer.New()'</Issue>
+               <Issue Certainty="33" Level="CriticalError">'frmDocExplorer.deWB.Set(WebBrowser)' calls into 'WebBrowser.DocumentCompleted.RemoveHandler(WebBrowserDocumentCompletedEventHandler)' which has a LinkDemand. By making this call, 'WebBrowser.DocumentCompleted.RemoveHandler(WebBrowserDocumentCompletedEventHandler)' is indirectly exposed to user code. Review the following call stack that might expose a way to circumvent security protection: &#xD;&#xA;   -&gt;'frmDocExplorer.deWB.Set(WebBrowser)'&#xD;&#xA;   -&gt;'frmDocExplorer.deWB.Set(WebBrowser)'&#xD;&#xA;   -&gt;'frmDocExplorer.InitializeComponent()'&#xD;&#xA;   -&gt;'frmDocExplorer.New()'</Issue>
+              </Message>
+             </Messages>
+            </Accessor>
+           </Accessors>
+          </Member>
+          <Member Name="#InitializeComponent()" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="DoNotIndirectlyExposeMethodsWithLinkDemands" Category="Microsoft.Security" CheckId="CA2122" Status="Active" Created="2011-04-16 21:46:51Z" FixCategory="NonBreaking">
+             <Issue Certainty="33" Level="CriticalError" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\Forms" File="frmDocExplorer.Designer.vb" Line="21">'frmDocExplorer.InitializeComponent()' calls into 'PropertyGrid.BackColor.Set(Color)' which has a LinkDemand. By making this call, 'PropertyGrid.BackColor.Set(Color)' is indirectly exposed to user code. Review the following call stack that might expose a way to circumvent security protection: &#xD;&#xA;   -&gt;'frmDocExplorer.InitializeComponent()'&#xD;&#xA;   -&gt;'frmDocExplorer.InitializeComponent()'&#xD;&#xA;   -&gt;'frmDocExplorer.New()'</Issue>
+             <Issue Certainty="33" Level="CriticalError" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\Forms" File="frmDocExplorer.Designer.vb" Line="21">'frmDocExplorer.InitializeComponent()' calls into 'PropertyGrid.HelpVisible.Set(Boolean)' which has a LinkDemand. By making this call, 'PropertyGrid.HelpVisible.Set(Boolean)' is indirectly exposed to user code. Review the following call stack that might expose a way to circumvent security protection: &#xD;&#xA;   -&gt;'frmDocExplorer.InitializeComponent()'&#xD;&#xA;   -&gt;'frmDocExplorer.InitializeComponent()'&#xD;&#xA;   -&gt;'frmDocExplorer.New()'</Issue>
+             <Issue Certainty="33" Level="CriticalError" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\Forms" File="frmDocExplorer.Designer.vb" Line="21">'frmDocExplorer.InitializeComponent()' calls into 'PropertyGrid.ToolbarVisible.Set(Boolean)' which has a LinkDemand. By making this call, 'PropertyGrid.ToolbarVisible.Set(Boolean)' is indirectly exposed to user code. Review the following call stack that might expose a way to circumvent security protection: &#xD;&#xA;   -&gt;'frmDocExplorer.InitializeComponent()'&#xD;&#xA;   -&gt;'frmDocExplorer.InitializeComponent()'&#xD;&#xA;   -&gt;'frmDocExplorer.New()'</Issue>
+             <Issue Certainty="33" Level="CriticalError" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\Forms" File="frmDocExplorer.Designer.vb" Line="21">'frmDocExplorer.InitializeComponent()' calls into 'WebBrowser.IsWebBrowserContextMenuEnabled.Set(Boolean)' which has a LinkDemand. By making this call, 'WebBrowser.IsWebBrowserContextMenuEnabled.Set(Boolean)' is indirectly exposed to user code. Review the following call stack that might expose a way to circumvent security protection: &#xD;&#xA;   -&gt;'frmDocExplorer.InitializeComponent()'&#xD;&#xA;   -&gt;'frmDocExplorer.InitializeComponent()'&#xD;&#xA;   -&gt;'frmDocExplorer.New()'</Issue>
+             <Issue Certainty="33" Level="CriticalError" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\Forms" File="frmDocExplorer.Designer.vb" Line="21">'frmDocExplorer.InitializeComponent()' calls into 'WebBrowser.ScriptErrorsSuppressed.Set(Boolean)' which has a LinkDemand. By making this call, 'WebBrowser.ScriptErrorsSuppressed.Set(Boolean)' is indirectly exposed to user code. Review the following call stack that might expose a way to circumvent security protection: &#xD;&#xA;   -&gt;'frmDocExplorer.InitializeComponent()'&#xD;&#xA;   -&gt;'frmDocExplorer.InitializeComponent()'&#xD;&#xA;   -&gt;'frmDocExplorer.New()'</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="frmMain" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#AboutUsToolStripMenuItem_Click(System.Object,System.EventArgs)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2011-04-16 21:46:51Z" FixCategory="DependsOnFix">
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\Forms" File="frmMain.vb" Line="698">In method 'frmMain.AboutUsToolStripMenuItem_Click(Object, EventArgs)', call System.IDisposable.Dispose on object 'ofrm' before all references to it are out of scope.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#cboURL_keypress(System.Object,System.Windows.Forms.KeyEventArgs)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2011-04-16 21:46:51Z" FixCategory="DependsOnFix">
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\Forms" File="frmMain.vb" Line="370">In method 'frmMain.cboURL_keypress(Object, KeyEventArgs)', call System.IDisposable.Dispose on object 'oTab' before all references to it are out of scope.</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\Forms" File="frmMain.vb" Line="369">In method 'frmMain.cboURL_keypress(Object, KeyEventArgs)', call System.IDisposable.Dispose on object 'ofrm' before all references to it are out of scope.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#CheckForFeedsToolStripMenuItem_Click(System.Object,System.EventArgs)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2011-04-16 21:46:51Z" FixCategory="DependsOnFix">
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\Forms" File="frmMain.vb" Line="715">In method 'frmMain.CheckForFeedsToolStripMenuItem_Click(Object, EventArgs)', call System.IDisposable.Dispose on object 'ofrm' before all references to it are out of scope.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#CheckToolStripMenuItem_Click(System.Object,System.EventArgs)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2011-04-16 21:46:51Z" FixCategory="DependsOnFix">
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\Forms" File="frmMain.vb" Line="640">In method 'frmMain.CheckToolStripMenuItem_Click(Object, EventArgs)', call System.IDisposable.Dispose on object 'ofrm' before all references to it are out of scope.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#frmMain_Load(System.Object,System.EventArgs)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2011-04-16 21:46:51Z" FixCategory="DependsOnFix">
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\Forms" File="frmMain.vb" Line="62">In method 'frmMain.frmMain_Load(Object, EventArgs)', call System.IDisposable.Dispose on object 'web' before all references to it are out of scope.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#LoadLinkFolders(System.IO.DirectoryInfo,System.Windows.Forms.ToolStripMenuItem)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2011-04-16 21:46:51Z" FixCategory="DependsOnFix">
+             <Issue Name="ExceptionEdge" Certainty="75" Level="Warning" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\Forms" File="frmMain.vb" Line="225">In method 'frmMain.LoadLinkFolders(DirectoryInfo, ToolStripMenuItem)', object 'fitm' is not disposed along all exception paths. Call System.IDisposable.Dispose on object 'fitm' before all references to it are out of scope.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#LoadLinksPath(System.String,System.Windows.Forms.ToolStripMenuItem)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2011-04-16 21:46:51Z" FixCategory="DependsOnFix">
+             <Issue Name="ExceptionEdge" Certainty="75" Level="Warning" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\Forms" File="frmMain.vb" Line="260">In method 'frmMain.LoadLinksPath(String, ToolStripMenuItem)', object 'oitm' is not disposed along all exception paths. Call System.IDisposable.Dispose on object 'oitm' before all references to it are out of scope.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#LoadPath(System.String,System.Windows.Forms.TreeNode,System.Windows.Forms.ToolStripMenuItem)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2011-04-16 21:46:51Z" FixCategory="DependsOnFix">
+             <Issue Name="ExceptionEdge" Certainty="75" Level="Warning" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\Forms" File="frmMain.vb" Line="173">In method 'frmMain.LoadPath(String, TreeNode, ToolStripMenuItem)', object 'oitm' is not disposed along all exception paths. Call System.IDisposable.Dispose on object 'oitm' before all references to it are out of scope.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#mnuDocExplorer_Click_1(System.Object,System.EventArgs)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2011-04-16 21:46:51Z" FixCategory="DependsOnFix">
+             <Issue Name="ExceptionEdge" Certainty="75" Level="Warning" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\Forms" File="frmMain.vb" Line="1200">In method 'frmMain.mnuDocExplorer_Click_1(Object, EventArgs)', object 'ofrm' is not disposed along all exception paths. Call System.IDisposable.Dispose on object 'ofrm' before all references to it are out of scope.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#mnuFeeds_Click(System.Object,System.EventArgs)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2011-04-16 21:46:51Z" FixCategory="DependsOnFix">
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\Forms" File="frmMain.vb" Line="515">In method 'frmMain.mnuFeeds_Click(Object, EventArgs)', call System.IDisposable.Dispose on object 'ofrm' before all references to it are out of scope.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#mnuGrabImages_Click_1(System.Object,System.EventArgs)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2011-04-16 21:46:51Z" FixCategory="DependsOnFix">
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\Forms" File="frmMain.vb" Line="1206">In method 'frmMain.mnuGrabImages_Click_1(Object, EventArgs)', call System.IDisposable.Dispose on object 'ofrm' before all references to it are out of scope.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#mnuSecInfo_Click(System.Object,System.EventArgs)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2011-04-16 21:46:51Z" FixCategory="DependsOnFix">
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\Forms" File="frmMain.vb" Line="427">In method 'frmMain.mnuSecInfo_Click(Object, EventArgs)', call System.IDisposable.Dispose on object 'ofrm' before all references to it are out of scope.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#mnuSettings_Click(System.Object,System.EventArgs)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2011-04-16 21:46:51Z" FixCategory="DependsOnFix">
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\Forms" File="frmMain.vb" Line="446">In method 'frmMain.mnuSettings_Click(Object, EventArgs)', call System.IDisposable.Dispose on object 'ofrm' before all references to it are out of scope.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#NewTabToolStripMenuItem_Click(System.Object,System.EventArgs)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2011-04-16 21:46:51Z" FixCategory="DependsOnFix">
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\Forms" File="frmMain.vb" Line="568">In method 'frmMain.NewTabToolStripMenuItem_Click(Object, EventArgs)', call System.IDisposable.Dispose on object 'oTab' before all references to it are out of scope.</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\Forms" File="frmMain.vb" Line="575">In method 'frmMain.NewTabToolStripMenuItem_Click(Object, EventArgs)', call System.IDisposable.Dispose on object 'oTab' before all references to it are out of scope.</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\Forms" File="frmMain.vb" Line="581">In method 'frmMain.NewTabToolStripMenuItem_Click(Object, EventArgs)', call System.IDisposable.Dispose on object 'oTab' before all references to it are out of scope.</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\Forms" File="frmMain.vb" Line="587">In method 'frmMain.NewTabToolStripMenuItem_Click(Object, EventArgs)', call System.IDisposable.Dispose on object 'oTab' before all references to it are out of scope.</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\Forms" File="frmMain.vb" Line="592">In method 'frmMain.NewTabToolStripMenuItem_Click(Object, EventArgs)', call System.IDisposable.Dispose on object 'oTab' before all references to it are out of scope.</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\Forms" File="frmMain.vb" Line="567">In method 'frmMain.NewTabToolStripMenuItem_Click(Object, EventArgs)', call System.IDisposable.Dispose on object 'ofrm' before all references to it are out of scope.</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\Forms" File="frmMain.vb" Line="574">In method 'frmMain.NewTabToolStripMenuItem_Click(Object, EventArgs)', call System.IDisposable.Dispose on object 'ofrm' before all references to it are out of scope.</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\Forms" File="frmMain.vb" Line="580">In method 'frmMain.NewTabToolStripMenuItem_Click(Object, EventArgs)', call System.IDisposable.Dispose on object 'ofrm' before all references to it are out of scope.</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\Forms" File="frmMain.vb" Line="586">In method 'frmMain.NewTabToolStripMenuItem_Click(Object, EventArgs)', call System.IDisposable.Dispose on object 'ofrm' before all references to it are out of scope.</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\Forms" File="frmMain.vb" Line="591">In method 'frmMain.NewTabToolStripMenuItem_Click(Object, EventArgs)', call System.IDisposable.Dispose on object 'ofrm' before all references to it are out of scope.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#NewTabToolStripMenuItem_Click_1(System.Object,System.EventArgs)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2011-04-16 21:46:51Z" FixCategory="DependsOnFix">
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\Forms" File="frmMain.vb" Line="653">In method 'frmMain.NewTabToolStripMenuItem_Click_1(Object, EventArgs)', call System.IDisposable.Dispose on object 'oTab' before all references to it are out of scope.</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\Forms" File="frmMain.vb" Line="659">In method 'frmMain.NewTabToolStripMenuItem_Click_1(Object, EventArgs)', call System.IDisposable.Dispose on object 'oTab' before all references to it are out of scope.</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\Forms" File="frmMain.vb" Line="665">In method 'frmMain.NewTabToolStripMenuItem_Click_1(Object, EventArgs)', call System.IDisposable.Dispose on object 'oTab' before all references to it are out of scope.</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\Forms" File="frmMain.vb" Line="672">In method 'frmMain.NewTabToolStripMenuItem_Click_1(Object, EventArgs)', call System.IDisposable.Dispose on object 'oTab' before all references to it are out of scope.</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\Forms" File="frmMain.vb" Line="677">In method 'frmMain.NewTabToolStripMenuItem_Click_1(Object, EventArgs)', call System.IDisposable.Dispose on object 'oTab' before all references to it are out of scope.</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\Forms" File="frmMain.vb" Line="652">In method 'frmMain.NewTabToolStripMenuItem_Click_1(Object, EventArgs)', call System.IDisposable.Dispose on object 'ofrm' before all references to it are out of scope.</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\Forms" File="frmMain.vb" Line="658">In method 'frmMain.NewTabToolStripMenuItem_Click_1(Object, EventArgs)', call System.IDisposable.Dispose on object 'ofrm' before all references to it are out of scope.</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\Forms" File="frmMain.vb" Line="664">In method 'frmMain.NewTabToolStripMenuItem_Click_1(Object, EventArgs)', call System.IDisposable.Dispose on object 'ofrm' before all references to it are out of scope.</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\Forms" File="frmMain.vb" Line="671">In method 'frmMain.NewTabToolStripMenuItem_Click_1(Object, EventArgs)', call System.IDisposable.Dispose on object 'ofrm' before all references to it are out of scope.</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\Forms" File="frmMain.vb" Line="676">In method 'frmMain.NewTabToolStripMenuItem_Click_1(Object, EventArgs)', call System.IDisposable.Dispose on object 'ofrm' before all references to it are out of scope.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#OptionsToolStripMenuItem_Click(System.Object,System.EventArgs)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2011-04-16 21:46:51Z" FixCategory="DependsOnFix">
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\Forms" File="frmMain.vb" Line="785">In method 'frmMain.OptionsToolStripMenuItem_Click(Object, EventArgs)', call System.IDisposable.Dispose on object 'ofrm' before all references to it are out of scope.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#PropertiesToolStripMenuItem1_Click_1(System.Object,System.EventArgs)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2011-04-16 21:46:51Z" FixCategory="DependsOnFix">
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\Forms" File="frmMain.vb" Line="1211">In method 'frmMain.PropertiesToolStripMenuItem1_Click_1(Object, EventArgs)', call System.IDisposable.Dispose on object 'ofrm' before all references to it are out of scope.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#SHGetFileInfo(System.String&amp;,System.Int32,Xtravo.frmMain+SHFILEINFO&amp;,System.Int32,System.Int32)" Kind="Method" Static="True" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2011-04-16 21:46:51Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalWarning">Because it is a P/Invoke method, 'frmMain.SHGetFileInfo(ByRef String, Integer, ByRef frmMain.SHFILEINFO, Integer, Integer)' should be defined in a class named NativeMethods, SafeNativeMethods, or UnsafeNativeMethods.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Startup()" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2011-04-16 21:46:51Z" FixCategory="DependsOnFix">
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\Forms" File="frmMain.vb" Line="77">In method 'frmMain.Startup()', call System.IDisposable.Dispose on object 'oTab' before all references to it are out of scope.</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\Forms" File="frmMain.vb" Line="76">In method 'frmMain.Startup()', call System.IDisposable.Dispose on object 'ofrm' before all references to it are out of scope.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Tab_Click_1(System.Object,System.EventArgs)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2011-04-16 21:46:51Z" FixCategory="DependsOnFix">
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\Forms" File="frmMain.vb" Line="522">In method 'frmMain.Tab_Click_1(Object, EventArgs)', call System.IDisposable.Dispose on object 'oTab' before all references to it are out of scope.</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\Forms" File="frmMain.vb" Line="528">In method 'frmMain.Tab_Click_1(Object, EventArgs)', call System.IDisposable.Dispose on object 'oTab' before all references to it are out of scope.</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\Forms" File="frmMain.vb" Line="534">In method 'frmMain.Tab_Click_1(Object, EventArgs)', call System.IDisposable.Dispose on object 'oTab' before all references to it are out of scope.</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\Forms" File="frmMain.vb" Line="540">In method 'frmMain.Tab_Click_1(Object, EventArgs)', call System.IDisposable.Dispose on object 'oTab' before all references to it are out of scope.</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\Forms" File="frmMain.vb" Line="545">In method 'frmMain.Tab_Click_1(Object, EventArgs)', call System.IDisposable.Dispose on object 'oTab' before all references to it are out of scope.</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\Forms" File="frmMain.vb" Line="521">In method 'frmMain.Tab_Click_1(Object, EventArgs)', call System.IDisposable.Dispose on object 'ofrm' before all references to it are out of scope.</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\Forms" File="frmMain.vb" Line="527">In method 'frmMain.Tab_Click_1(Object, EventArgs)', call System.IDisposable.Dispose on object 'ofrm' before all references to it are out of scope.</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\Forms" File="frmMain.vb" Line="533">In method 'frmMain.Tab_Click_1(Object, EventArgs)', call System.IDisposable.Dispose on object 'ofrm' before all references to it are out of scope.</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\Forms" File="frmMain.vb" Line="539">In method 'frmMain.Tab_Click_1(Object, EventArgs)', call System.IDisposable.Dispose on object 'ofrm' before all references to it are out of scope.</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\Forms" File="frmMain.vb" Line="544">In method 'frmMain.Tab_Click_1(Object, EventArgs)', call System.IDisposable.Dispose on object 'ofrm' before all references to it are out of scope.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#ToolStripStatusLabel1_Click(System.Object,System.EventArgs)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2011-04-16 21:46:51Z" FixCategory="DependsOnFix">
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\Forms" File="frmMain.vb" Line="1274">In method 'frmMain.ToolStripStatusLabel1_Click(Object, EventArgs)', call System.IDisposable.Dispose on object 'ofrm' before all references to it are out of scope.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#XtravoExplorerSettingsToolStripMenuItem_Click(System.Object,System.EventArgs)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2011-04-16 21:46:51Z" FixCategory="DependsOnFix">
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\Forms" File="frmMain.vb" Line="620">In method 'frmMain.XtravoExplorerSettingsToolStripMenuItem_Click(Object, EventArgs)', call System.IDisposable.Dispose on object 'ofrm' before all references to it are out of scope.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="frmProperties" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#InitializeComponent()" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="DoNotIndirectlyExposeMethodsWithLinkDemands" Category="Microsoft.Security" CheckId="CA2122" Status="Active" Created="2011-04-16 21:46:51Z" FixCategory="NonBreaking">
+             <Issue Certainty="33" Level="CriticalError" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\Forms" File="frmProperties.Designer.vb" Line="21">'frmProperties.InitializeComponent()' calls into 'PropertyGrid.BackColor.Set(Color)' which has a LinkDemand. By making this call, 'PropertyGrid.BackColor.Set(Color)' is indirectly exposed to user code. Review the following call stack that might expose a way to circumvent security protection: &#xD;&#xA;   -&gt;'frmProperties.InitializeComponent()'&#xD;&#xA;   -&gt;'frmProperties.InitializeComponent()'&#xD;&#xA;   -&gt;'frmProperties.New()'</Issue>
+             <Issue Certainty="33" Level="CriticalError" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\Forms" File="frmProperties.Designer.vb" Line="21">'frmProperties.InitializeComponent()' calls into 'PropertyGrid.CategoryForeColor.Set(Color)' which has a LinkDemand. By making this call, 'PropertyGrid.CategoryForeColor.Set(Color)' is indirectly exposed to user code. Review the following call stack that might expose a way to circumvent security protection: &#xD;&#xA;   -&gt;'frmProperties.InitializeComponent()'&#xD;&#xA;   -&gt;'frmProperties.InitializeComponent()'&#xD;&#xA;   -&gt;'frmProperties.New()'</Issue>
+             <Issue Certainty="33" Level="CriticalError" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\Forms" File="frmProperties.Designer.vb" Line="21">'frmProperties.InitializeComponent()' calls into 'PropertyGrid.CommandsForeColor.Set(Color)' which has a LinkDemand. By making this call, 'PropertyGrid.CommandsForeColor.Set(Color)' is indirectly exposed to user code. Review the following call stack that might expose a way to circumvent security protection: &#xD;&#xA;   -&gt;'frmProperties.InitializeComponent()'&#xD;&#xA;   -&gt;'frmProperties.InitializeComponent()'&#xD;&#xA;   -&gt;'frmProperties.New()'</Issue>
+             <Issue Certainty="33" Level="CriticalError" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\Forms" File="frmProperties.Designer.vb" Line="21">'frmProperties.InitializeComponent()' calls into 'PropertyGrid.HelpBackColor.Set(Color)' which has a LinkDemand. By making this call, 'PropertyGrid.HelpBackColor.Set(Color)' is indirectly exposed to user code. Review the following call stack that might expose a way to circumvent security protection: &#xD;&#xA;   -&gt;'frmProperties.InitializeComponent()'&#xD;&#xA;   -&gt;'frmProperties.InitializeComponent()'&#xD;&#xA;   -&gt;'frmProperties.New()'</Issue>
+             <Issue Certainty="33" Level="CriticalError" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\Forms" File="frmProperties.Designer.vb" Line="21">'frmProperties.InitializeComponent()' calls into 'PropertyGrid.HelpForeColor.Set(Color)' which has a LinkDemand. By making this call, 'PropertyGrid.HelpForeColor.Set(Color)' is indirectly exposed to user code. Review the following call stack that might expose a way to circumvent security protection: &#xD;&#xA;   -&gt;'frmProperties.InitializeComponent()'&#xD;&#xA;   -&gt;'frmProperties.InitializeComponent()'&#xD;&#xA;   -&gt;'frmProperties.New()'</Issue>
+             <Issue Certainty="33" Level="CriticalError" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\Forms" File="frmProperties.Designer.vb" Line="21">'frmProperties.InitializeComponent()' calls into 'PropertyGrid.HelpVisible.Set(Boolean)' which has a LinkDemand. By making this call, 'PropertyGrid.HelpVisible.Set(Boolean)' is indirectly exposed to user code. Review the following call stack that might expose a way to circumvent security protection: &#xD;&#xA;   -&gt;'frmProperties.InitializeComponent()'&#xD;&#xA;   -&gt;'frmProperties.InitializeComponent()'&#xD;&#xA;   -&gt;'frmProperties.New()'</Issue>
+             <Issue Certainty="33" Level="CriticalError" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\Forms" File="frmProperties.Designer.vb" Line="21">'frmProperties.InitializeComponent()' calls into 'PropertyGrid.LineColor.Set(Color)' which has a LinkDemand. By making this call, 'PropertyGrid.LineColor.Set(Color)' is indirectly exposed to user code. Review the following call stack that might expose a way to circumvent security protection: &#xD;&#xA;   -&gt;'frmProperties.InitializeComponent()'&#xD;&#xA;   -&gt;'frmProperties.InitializeComponent()'&#xD;&#xA;   -&gt;'frmProperties.New()'</Issue>
+             <Issue Certainty="33" Level="CriticalError" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\Forms" File="frmProperties.Designer.vb" Line="21">'frmProperties.InitializeComponent()' calls into 'PropertyGrid.ViewForeColor.Set(Color)' which has a LinkDemand. By making this call, 'PropertyGrid.ViewForeColor.Set(Color)' is indirectly exposed to user code. Review the following call stack that might expose a way to circumvent security protection: &#xD;&#xA;   -&gt;'frmProperties.InitializeComponent()'&#xD;&#xA;   -&gt;'frmProperties.InitializeComponent()'&#xD;&#xA;   -&gt;'frmProperties.New()'</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="frmRSS" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#btnAddFeed_Click(System.Object,System.EventArgs)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2011-04-16 21:46:51Z" FixCategory="DependsOnFix">
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\Forms" File="frmRSS.vb" Line="212">In method 'frmRSS.btnAddFeed_Click(Object, EventArgs)', call System.IDisposable.Dispose on object 'ofrm' before all references to it are out of scope.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#btnAddGroup_Click(System.Object,System.EventArgs)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2011-04-16 21:46:51Z" FixCategory="DependsOnFix">
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\Forms" File="frmRSS.vb" Line="219">In method 'frmRSS.btnAddGroup_Click(Object, EventArgs)', call System.IDisposable.Dispose on object 'ofrm' before all references to it are out of scope.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#DeleteGroup()" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2011-04-16 21:46:51Z" FixCategory="DependsOnFix">
+             <Issue Name="ExceptionEdge" Certainty="75" Level="Warning" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\Forms" File="frmRSS.vb" Line="271">In method 'frmRSS.DeleteGroup()', object 'oConn' is not disposed along all exception paths. Call System.IDisposable.Dispose on object 'oConn' before all references to it are out of scope.</Issue>
+            </Message>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2011-04-16 21:46:51Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\Forms" File="frmRSS.vb" Line="281">Object 'oConn' can be disposed more than once in method 'frmRSS.DeleteGroup()'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 281</Issue>
+            </Message>
+            <Message TypeName="Review SQL queries for security vulnerabilities" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2011-04-16 21:46:51Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\Forms" File="frmRSS.vb" Line="272">The query string passed to 'OleDbCommand.New(String, OleDbConnection)' in 'frmRSS.DeleteGroup()' could contain the following variables 'Conversions.ToString(Conversions.ToInteger(Me.tvRSS.SelectedNode.Tag))'. If any of these variables could come from user input, consider using a stored procedure or a parameterized SQL query instead of building the query with string concatenations.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#DeleteItem()" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2011-04-16 21:46:51Z" FixCategory="DependsOnFix">
+             <Issue Name="ExceptionEdge" Certainty="75" Level="Warning" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\Forms" File="frmRSS.vb" Line="253">In method 'frmRSS.DeleteItem()', object 'oConn' is not disposed along all exception paths. Call System.IDisposable.Dispose on object 'oConn' before all references to it are out of scope.</Issue>
+            </Message>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2011-04-16 21:46:51Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\Forms" File="frmRSS.vb" Line="263">Object 'oConn' can be disposed more than once in method 'frmRSS.DeleteItem()'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 263</Issue>
+            </Message>
+            <Message TypeName="Review SQL queries for security vulnerabilities" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2011-04-16 21:46:51Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\Forms" File="frmRSS.vb" Line="254">The query string passed to 'OleDbCommand.New(String, OleDbConnection)' in 'frmRSS.DeleteItem()' could contain the following variables '"DELETE FROM RssChannels WHERE Link='" &amp; Me.tvRSS.SelectedNode.Tag &amp; "'"'. If any of these variables could come from user input, consider using a stored procedure or a parameterized SQL query instead of building the query with string concatenations.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GetChannels(System.Windows.Forms.TreeNode)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2011-04-16 21:46:51Z" FixCategory="DependsOnFix">
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\Forms" File="frmRSS.vb" Line="87">In method 'frmRSS.GetChannels(TreeNode)', call System.IDisposable.Dispose on object 'dt' before all references to it are out of scope.</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\Forms" File="frmRSS.vb" Line="85">In method 'frmRSS.GetChannels(TreeNode)', call System.IDisposable.Dispose on object 'oConn' before all references to it are out of scope.</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\Forms" File="frmRSS.vb" Line="86">In method 'frmRSS.GetChannels(TreeNode)', call System.IDisposable.Dispose on object 'oDa' before all references to it are out of scope.</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\Forms" File="frmRSS.vb" Line="104">In method 'frmRSS.GetChannels(TreeNode)', call System.IDisposable.Dispose on object 'ofrm' before all references to it are out of scope.</Issue>
+            </Message>
+            <Message TypeName="Review SQL queries for security vulnerabilities" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2011-04-16 21:46:51Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\Forms" File="frmRSS.vb" Line="86">The query string passed to 'OleDbDataAdapter.New(String, OleDbConnection)' in 'frmRSS.GetChannels(TreeNode)' could contain the following variables '"SELECT * FROM RSSChannels WHERE GROUPID=" &amp; iNode.Tag'. If any of these variables could come from user input, consider using a stored procedure or a parameterized SQL query instead of building the query with string concatenations.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GetChildren(System.Windows.Forms.TreeNode,System.Data.DataTable)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2011-04-16 21:46:51Z" FixCategory="DependsOnFix">
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\Forms" File="frmRSS.vb" Line="60">In method 'frmRSS.GetChildren(TreeNode, DataTable)', call System.IDisposable.Dispose on object 'dv' before all references to it are out of scope.</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\Forms" File="frmRSS.vb" Line="77">In method 'frmRSS.GetChildren(TreeNode, DataTable)', call System.IDisposable.Dispose on object 'ofrm' before all references to it are out of scope.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GetItemsDB(System.Int32)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2011-04-16 21:46:51Z" FixCategory="DependsOnFix">
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\Forms" File="frmRSS.vb" Line="114">In method 'frmRSS.GetItemsDB(Integer)', call System.IDisposable.Dispose on object 'dt' before all references to it are out of scope.</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\Forms" File="frmRSS.vb" Line="112">In method 'frmRSS.GetItemsDB(Integer)', call System.IDisposable.Dispose on object 'oConn' before all references to it are out of scope.</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\Forms" File="frmRSS.vb" Line="113">In method 'frmRSS.GetItemsDB(Integer)', call System.IDisposable.Dispose on object 'oDa' before all references to it are out of scope.</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\Forms" File="frmRSS.vb" Line="127">In method 'frmRSS.GetItemsDB(Integer)', call System.IDisposable.Dispose on object 'ofrm' before all references to it are out of scope.</Issue>
+            </Message>
+            <Message TypeName="Review SQL queries for security vulnerabilities" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2011-04-16 21:46:51Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\Forms" File="frmRSS.vb" Line="113">The query string passed to 'OleDbDataAdapter.New(String, OleDbConnection)' in 'frmRSS.GetItemsDB(Integer)' could contain the following variables 'Conversions.ToString(ChannelID)'. If any of these variables could come from user input, consider using a stored procedure or a parameterized SQL query instead of building the query with string concatenations.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GetItemsFromInternet(System.String)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2011-04-16 21:46:51Z" FixCategory="DependsOnFix">
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\Forms" File="frmRSS.vb" Line="148">In method 'frmRSS.GetItemsFromInternet(String)', call System.IDisposable.Dispose on object 'ds' before all references to it are out of scope.</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\Forms" File="frmRSS.vb" Line="154">In method 'frmRSS.GetItemsFromInternet(String)', call System.IDisposable.Dispose on object 'ofrm' before all references to it are out of scope.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#InitializeComponent()" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="DoNotIndirectlyExposeMethodsWithLinkDemands" Category="Microsoft.Security" CheckId="CA2122" Status="Active" Created="2011-04-16 21:46:51Z" FixCategory="NonBreaking">
+             <Issue Certainty="33" Level="CriticalError" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\Forms" File="frmRSS.designer.vb" Line="21">'frmRSS.InitializeComponent()' calls into 'WebBrowser.IsWebBrowserContextMenuEnabled.Set(Boolean)' which has a LinkDemand. By making this call, 'WebBrowser.IsWebBrowserContextMenuEnabled.Set(Boolean)' is indirectly exposed to user code. Review the following call stack that might expose a way to circumvent security protection: &#xD;&#xA;   -&gt;'frmRSS.InitializeComponent()'&#xD;&#xA;   -&gt;'frmRSS.InitializeComponent()'&#xD;&#xA;   -&gt;'frmRSS.New()'</Issue>
+             <Issue Certainty="33" Level="CriticalError" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\Forms" File="frmRSS.designer.vb" Line="21">'frmRSS.InitializeComponent()' calls into 'WebBrowser.ScriptErrorsSuppressed.Set(Boolean)' which has a LinkDemand. By making this call, 'WebBrowser.ScriptErrorsSuppressed.Set(Boolean)' is indirectly exposed to user code. Review the following call stack that might expose a way to circumvent security protection: &#xD;&#xA;   -&gt;'frmRSS.InitializeComponent()'&#xD;&#xA;   -&gt;'frmRSS.InitializeComponent()'&#xD;&#xA;   -&gt;'frmRSS.New()'</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#LoadFromDB()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2011-04-16 21:46:51Z" FixCategory="DependsOnFix">
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\Forms" File="frmRSS.vb" Line="32">In method 'frmRSS.LoadFromDB()', call System.IDisposable.Dispose on object 'dt' before all references to it are out of scope.</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\Forms" File="frmRSS.vb" Line="30">In method 'frmRSS.LoadFromDB()', call System.IDisposable.Dispose on object 'oConn' before all references to it are out of scope.</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\Forms" File="frmRSS.vb" Line="31">In method 'frmRSS.LoadFromDB()', call System.IDisposable.Dispose on object 'oDa' before all references to it are out of scope.</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\Forms" File="frmRSS.vb" Line="53">In method 'frmRSS.LoadFromDB()', call System.IDisposable.Dispose on object 'ofrm' before all references to it are out of scope.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#mnuMainBrowser_Click(System.Object,System.EventArgs)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2011-04-16 21:46:51Z" FixCategory="DependsOnFix">
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\Forms" File="frmRSS.vb" Line="288">In method 'frmRSS.mnuMainBrowser_Click(Object, EventArgs)', call System.IDisposable.Dispose on object 'ofrm' before all references to it are out of scope.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#wbRSS" Kind="Property" Static="False" Accessibility="Assembly" ExternallyVisible="False">
+           <Accessors>
+            <Accessor Name="#set_wbRSS(Xtravo.exBrowser)" Kind="Method" Static="False" Accessibility="Assembly" ExternallyVisible="False">
+             <Messages>
+              <Message TypeName="DoNotIndirectlyExposeMethodsWithLinkDemands" Category="Microsoft.Security" CheckId="CA2122" Status="Active" Created="2011-04-16 21:46:51Z" FixCategory="NonBreaking">
+               <Issue Certainty="33" Level="CriticalError">'frmRSS.wbRSS.Set(exBrowser)' calls into 'WebBrowser.DocumentCompleted.AddHandler(WebBrowserDocumentCompletedEventHandler)' which has a LinkDemand. By making this call, 'WebBrowser.DocumentCompleted.AddHandler(WebBrowserDocumentCompletedEventHandler)' is indirectly exposed to user code. Review the following call stack that might expose a way to circumvent security protection: &#xD;&#xA;   -&gt;'frmRSS.wbRSS.Set(exBrowser)'&#xD;&#xA;   -&gt;'frmRSS.wbRSS.Set(exBrowser)'&#xD;&#xA;   -&gt;'frmRSS.InitializeComponent()'&#xD;&#xA;   -&gt;'frmRSS.New()'</Issue>
+               <Issue Certainty="33" Level="CriticalError">'frmRSS.wbRSS.Set(exBrowser)' calls into 'WebBrowser.DocumentCompleted.RemoveHandler(WebBrowserDocumentCompletedEventHandler)' which has a LinkDemand. By making this call, 'WebBrowser.DocumentCompleted.RemoveHandler(WebBrowserDocumentCompletedEventHandler)' is indirectly exposed to user code. Review the following call stack that might expose a way to circumvent security protection: &#xD;&#xA;   -&gt;'frmRSS.wbRSS.Set(exBrowser)'&#xD;&#xA;   -&gt;'frmRSS.wbRSS.Set(exBrowser)'&#xD;&#xA;   -&gt;'frmRSS.InitializeComponent()'&#xD;&#xA;   -&gt;'frmRSS.New()'</Issue>
+               <Issue Certainty="33" Level="CriticalError">'frmRSS.wbRSS.Set(exBrowser)' calls into 'WebBrowser.ProgressChanged.AddHandler(WebBrowserProgressChangedEventHandler)' which has a LinkDemand. By making this call, 'WebBrowser.ProgressChanged.AddHandler(WebBrowserProgressChangedEventHandler)' is indirectly exposed to user code. Review the following call stack that might expose a way to circumvent security protection: &#xD;&#xA;   -&gt;'frmRSS.wbRSS.Set(exBrowser)'&#xD;&#xA;   -&gt;'frmRSS.wbRSS.Set(exBrowser)'&#xD;&#xA;   -&gt;'frmRSS.InitializeComponent()'&#xD;&#xA;   -&gt;'frmRSS.New()'</Issue>
+               <Issue Certainty="33" Level="CriticalError">'frmRSS.wbRSS.Set(exBrowser)' calls into 'WebBrowser.ProgressChanged.RemoveHandler(WebBrowserProgressChangedEventHandler)' which has a LinkDemand. By making this call, 'WebBrowser.ProgressChanged.RemoveHandler(WebBrowserProgressChangedEventHandler)' is indirectly exposed to user code. Review the following call stack that might expose a way to circumvent security protection: &#xD;&#xA;   -&gt;'frmRSS.wbRSS.Set(exBrowser)'&#xD;&#xA;   -&gt;'frmRSS.wbRSS.Set(exBrowser)'&#xD;&#xA;   -&gt;'frmRSS.InitializeComponent()'&#xD;&#xA;   -&gt;'frmRSS.New()'</Issue>
+               <Issue Certainty="33" Level="CriticalError">'frmRSS.wbRSS.Set(exBrowser)' calls into 'WebBrowser.StatusTextChanged.AddHandler(EventHandler)' which has a LinkDemand. By making this call, 'WebBrowser.StatusTextChanged.AddHandler(EventHandler)' is indirectly exposed to user code. Review the following call stack that might expose a way to circumvent security protection: &#xD;&#xA;   -&gt;'frmRSS.wbRSS.Set(exBrowser)'&#xD;&#xA;   -&gt;'frmRSS.wbRSS.Set(exBrowser)'&#xD;&#xA;   -&gt;'frmRSS.InitializeComponent()'&#xD;&#xA;   -&gt;'frmRSS.New()'</Issue>
+               <Issue Certainty="33" Level="CriticalError">'frmRSS.wbRSS.Set(exBrowser)' calls into 'WebBrowser.StatusTextChanged.RemoveHandler(EventHandler)' which has a LinkDemand. By making this call, 'WebBrowser.StatusTextChanged.RemoveHandler(EventHandler)' is indirectly exposed to user code. Review the following call stack that might expose a way to circumvent security protection: &#xD;&#xA;   -&gt;'frmRSS.wbRSS.Set(exBrowser)'&#xD;&#xA;   -&gt;'frmRSS.wbRSS.Set(exBrowser)'&#xD;&#xA;   -&gt;'frmRSS.InitializeComponent()'&#xD;&#xA;   -&gt;'frmRSS.New()'</Issue>
+              </Message>
+             </Messages>
+            </Accessor>
+           </Accessors>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="frmScrapeImages" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#btnPath_Click(System.Object,System.EventArgs)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2011-04-16 21:46:51Z" FixCategory="DependsOnFix">
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\Forms" File="frmScrapeImages.vb" Line="68">In method 'frmScrapeImages.btnPath_Click(Object, EventArgs)', call System.IDisposable.Dispose on object 'fbd' before all references to it are out of scope.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="frmSecInfo" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#lbCookies_LinkClicked(System.Object,System.Windows.Forms.LinkLabelLinkClickedEventArgs)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2011-04-16 21:46:51Z" FixCategory="DependsOnFix">
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\Forms" File="frmSecInfo.vb" Line="26">In method 'frmSecInfo.lbCookies_LinkClicked(Object, LinkLabelLinkClickedEventArgs)', call System.IDisposable.Dispose on object 'ofrm' before all references to it are out of scope.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="frmSettings" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#LinkLabel1_LinkClicked(System.Object,System.Windows.Forms.LinkLabelLinkClickedEventArgs)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2011-04-16 21:46:51Z" FixCategory="DependsOnFix">
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\Forms" File="frmSettings.vb" Line="899">In method 'frmSettings.LinkLabel1_LinkClicked(Object, LinkLabelLinkClickedEventArgs)', call System.IDisposable.Dispose on object 'ofrm' before all references to it are out of scope.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="Helper" Kind="Class" Accessibility="Assembly" ExternallyVisible="False">
+         <Members>
+          <Member Name="#CreateGlassGradientBrush(System.Drawing.Rectangle,System.Drawing.Color,System.Drawing.Color)" Kind="Method" Static="True" Accessibility="Assembly" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2011-04-16 21:46:51Z" FixCategory="DependsOnFix">
+             <Issue Name="ExceptionEdge" Certainty="75" Level="Warning" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\MDITabs" File="TabControl.vb" Line="1786">In method 'Helper.CreateGlassGradientBrush(Rectangle, Color, Color)', object 'b' is not disposed along all exception paths. Call System.IDisposable.Dispose on object 'b' before all references to it are out of scope.</Issue>
+             <Issue Name="ExceptionEdge" Certainty="75" Level="Warning" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\MDITabs" File="TabControl.vb" Line="1787">In method 'Helper.CreateGlassGradientBrush(Rectangle, Color, Color)', object 'x' is not disposed along all exception paths. Call System.IDisposable.Dispose on object 'x' before all references to it are out of scope.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="Page2Image" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#CapturePage(System.Windows.Forms.HtmlDocument)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2011-04-16 21:46:51Z" FixCategory="DependsOnFix">
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\ClassFiles" File="Page2Image.vb" Line="64">In method 'Page2Image.CapturePage(HtmlDocument)', call System.IDisposable.Dispose on object 'bm' before all references to it are out of scope.</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\ClassFiles" File="Page2Image.vb" Line="67">In method 'Page2Image.CapturePage(HtmlDocument)', call System.IDisposable.Dispose on object 'bm2' before all references to it are out of scope.</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\ClassFiles" File="Page2Image.vb" Line="153">In method 'Page2Image.CapturePage(HtmlDocument)', call System.IDisposable.Dispose on object 'drawBrush' before all references to it are out of scope.</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\ClassFiles" File="Page2Image.vb" Line="154">In method 'Page2Image.CapturePage(HtmlDocument)', call System.IDisposable.Dispose on object 'drawBrush2' before all references to it are out of scope.</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\ClassFiles" File="Page2Image.vb" Line="174">In method 'Page2Image.CapturePage(HtmlDocument)', call System.IDisposable.Dispose on object 'drawBrushURL' before all references to it are out of scope.</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\ClassFiles" File="Page2Image.vb" Line="152">In method 'Page2Image.CapturePage(HtmlDocument)', call System.IDisposable.Dispose on object 'drawFont' before all references to it are out of scope.</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\ClassFiles" File="Page2Image.vb" Line="175">In method 'Page2Image.CapturePage(HtmlDocument)', call System.IDisposable.Dispose on object 'drawFont' before all references to it are out of scope.</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\ClassFiles" File="Page2Image.vb" Line="157">In method 'Page2Image.CapturePage(HtmlDocument)', call System.IDisposable.Dispose on object 'drawFormat' before all references to it are out of scope.</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\ClassFiles" File="Page2Image.vb" Line="176">In method 'Page2Image.CapturePage(HtmlDocument)', call System.IDisposable.Dispose on object 'drawFormat' before all references to it are out of scope.</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\ClassFiles" File="Page2Image.vb" Line="198">In method 'Page2Image.CapturePage(HtmlDocument)', call System.IDisposable.Dispose on object 'eps' before all references to it are out of scope.</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\ClassFiles" File="Page2Image.vb" Line="171">In method 'Page2Image.CapturePage(HtmlDocument)', call System.IDisposable.Dispose on object 'fillRegion' before all references to it are out of scope.</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\ClassFiles" File="Page2Image.vb" Line="186">In method 'Page2Image.CapturePage(HtmlDocument)', call System.IDisposable.Dispose on object 'finalImage' before all references to it are out of scope.</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\ClassFiles" File="Page2Image.vb" Line="127">In method 'Page2Image.CapturePage(HtmlDocument)', call System.IDisposable.Dispose on object 'myPen' before all references to it are out of scope.</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\ClassFiles" File="Page2Image.vb" Line="128">In method 'Page2Image.CapturePage(HtmlDocument)', call System.IDisposable.Dispose on object 'myShadowPen' before all references to it are out of scope.</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\ClassFiles" File="Page2Image.vb" Line="216">In method 'Page2Image.CapturePage(HtmlDocument)', call System.IDisposable.Dispose on object 'ofrm' before all references to it are out of scope.</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\ClassFiles" File="Page2Image.vb" Line="169">In method 'Page2Image.CapturePage(HtmlDocument)', call System.IDisposable.Dispose on object 'whiteBrush' before all references to it are out of scope.</Issue>
+            </Message>
+            <Message TypeName="DoNotIndirectlyExposeMethodsWithLinkDemands" Category="Microsoft.Security" CheckId="CA2122" Status="Active" Created="2011-04-16 21:46:51Z" FixCategory="NonBreaking">
+             <Issue Certainty="33" Level="CriticalError" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\ClassFiles" File="Page2Image.vb" Line="32">'Page2Image.CapturePage(HtmlDocument)' calls into 'Bitmap.GetHbitmap()' which has a LinkDemand. By making this call, 'Bitmap.GetHbitmap()' is indirectly exposed to user code. Review the following call stack that might expose a way to circumvent security protection: &#xD;&#xA;   -&gt;'Page2Image.CapturePage(HtmlDocument)'&#xD;&#xA;   -&gt;'Page2Image.CapturePage(HtmlDocument)'</Issue>
+             <Issue Certainty="33" Level="CriticalError" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\ClassFiles" File="Page2Image.vb" Line="32">'Page2Image.CapturePage(HtmlDocument)' calls into 'Graphics.GetHdc()' which has a LinkDemand. By making this call, 'Graphics.GetHdc()' is indirectly exposed to user code. Review the following call stack that might expose a way to circumvent security protection: &#xD;&#xA;   -&gt;'Page2Image.CapturePage(HtmlDocument)'&#xD;&#xA;   -&gt;'Page2Image.CapturePage(HtmlDocument)'</Issue>
+             <Issue Certainty="33" Level="CriticalError" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\ClassFiles" File="Page2Image.vb" Line="32">'Page2Image.CapturePage(HtmlDocument)' calls into 'HtmlDocument.Body.Get()' which has a LinkDemand. By making this call, 'HtmlDocument.Body.Get()' is indirectly exposed to user code. Review the following call stack that might expose a way to circumvent security protection: &#xD;&#xA;   -&gt;'Page2Image.CapturePage(HtmlDocument)'&#xD;&#xA;   -&gt;'Page2Image.CapturePage(HtmlDocument)'</Issue>
+             <Issue Certainty="33" Level="CriticalError" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\ClassFiles" File="Page2Image.vb" Line="32">'Page2Image.CapturePage(HtmlDocument)' calls into 'HtmlDocument.Url.Get()' which has a LinkDemand. By making this call, 'HtmlDocument.Url.Get()' is indirectly exposed to user code. Review the following call stack that might expose a way to circumvent security protection: &#xD;&#xA;   -&gt;'Page2Image.CapturePage(HtmlDocument)'&#xD;&#xA;   -&gt;'Page2Image.CapturePage(HtmlDocument)'</Issue>
+             <Issue Certainty="33" Level="CriticalError" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\ClassFiles" File="Page2Image.vb" Line="32">'Page2Image.CapturePage(HtmlDocument)' calls into 'HtmlElement.GetAttribute(String)' which has a LinkDemand. By making this call, 'HtmlElement.GetAttribute(String)' is indirectly exposed to user code. Review the following call stack that might expose a way to circumvent security protection: &#xD;&#xA;   -&gt;'Page2Image.CapturePage(HtmlDocument)'&#xD;&#xA;   -&gt;'Page2Image.CapturePage(HtmlDocument)'</Issue>
+             <Issue Certainty="33" Level="CriticalError" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\ClassFiles" File="Page2Image.vb" Line="32">'Page2Image.CapturePage(HtmlDocument)' calls into 'HtmlElement.SetAttribute(String, String)' which has a LinkDemand. By making this call, 'HtmlElement.SetAttribute(String, String)' is indirectly exposed to user code. Review the following call stack that might expose a way to circumvent security protection: &#xD;&#xA;   -&gt;'Page2Image.CapturePage(HtmlDocument)'&#xD;&#xA;   -&gt;'Page2Image.CapturePage(HtmlDocument)'</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#FindWindowEx(System.IntPtr,System.IntPtr,System.String,System.IntPtr)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2011-04-16 21:46:51Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalWarning">Because it is a P/Invoke method, 'Page2Image.FindWindowEx(IntPtr, IntPtr, String, IntPtr)' should be defined in a class named NativeMethods, SafeNativeMethods, or UnsafeNativeMethods.</Issue>
+            </Message>
+            <Message TypeName="PInvokesShouldNotBeVisible" Category="Microsoft.Interoperability" CheckId="CA1401" Status="Active" Created="2011-04-16 21:46:51Z" FixCategory="Breaking">
+             <Issue Certainty="50" Level="CriticalError">Change the accessibility of P/Invoke 'Page2Image.FindWindowEx(IntPtr, IntPtr, String, IntPtr)' so that it is no longer visible from outside its assembly.</Issue>
+            </Message>
+            <Message Id="2" TypeName="SpecifyMarshalingForPInvokeStringArguments" Category="Microsoft.Globalization" CheckId="CA2101" Status="Active" Created="2011-04-16 21:46:51Z" FixCategory="NonBreaking">
+             <Issue Name="Parameter" Certainty="75" Level="Error">To reduce security risk, marshal parameter 'sClassName' as Unicode, by setting DllImport.CharSet to CharSet.Unicode, or by explicitly marshaling the parameter as UnmanagedType.LPWStr. If you need to marshal this string as ANSI or system-dependent, set BestFitMapping=false; for added security, also set ThrowOnUnmappableChar=true.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GetClassName(System.Int32,System.Text.StringBuilder,System.Int32)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2011-04-16 21:46:51Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalWarning">Because it is a P/Invoke method, 'Page2Image.GetClassName(Integer, StringBuilder, Integer)' should be defined in a class named NativeMethods, SafeNativeMethods, or UnsafeNativeMethods.</Issue>
+            </Message>
+            <Message TypeName="PInvokesShouldNotBeVisible" Category="Microsoft.Interoperability" CheckId="CA1401" Status="Active" Created="2011-04-16 21:46:51Z" FixCategory="Breaking">
+             <Issue Certainty="50" Level="CriticalError">Change the accessibility of P/Invoke 'Page2Image.GetClassName(Integer, StringBuilder, Integer)' so that it is no longer visible from outside its assembly.</Issue>
+            </Message>
+            <Message Id="1" TypeName="SpecifyMarshalingForPInvokeStringArguments" Category="Microsoft.Globalization" CheckId="CA2101" Status="Active" Created="2011-04-16 21:46:51Z" FixCategory="NonBreaking">
+             <Issue Name="ParameterImplicitAnsi" Certainty="75" Level="Error">To reduce security risk, marshal parameter 's' as Unicode, by setting DllImport.CharSet to CharSet.Unicode, or by explicitly marshaling the parameter as UnmanagedType.LPWStr. If you need to marshal this string as ANSI or system-dependent, specify MarshalAs explicitly, and set BestFitMapping=false; for added security, also set ThrowOnUnmappableChar=true.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GetWindow(System.IntPtr,System.Int32)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2011-04-16 21:46:51Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalWarning">Because it is a P/Invoke method, 'Page2Image.GetWindow(IntPtr, Integer)' should be defined in a class named NativeMethods, SafeNativeMethods, or UnsafeNativeMethods.</Issue>
+            </Message>
+            <Message TypeName="PInvokesShouldNotBeVisible" Category="Microsoft.Interoperability" CheckId="CA1401" Status="Active" Created="2011-04-16 21:46:51Z" FixCategory="Breaking">
+             <Issue Certainty="50" Level="CriticalError">Change the accessibility of P/Invoke 'Page2Image.GetWindow(IntPtr, Integer)' so that it is no longer visible from outside its assembly.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#PrintWindow(System.IntPtr,System.IntPtr,System.UInt32)" Kind="Method" Static="True" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2011-04-16 21:46:51Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalWarning">Because it is a P/Invoke method, 'Page2Image.PrintWindow(IntPtr, IntPtr, UInteger)' should be defined in a class named NativeMethods, SafeNativeMethods, or UnsafeNativeMethods.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="Ruler" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#DrawTick(System.Drawing.Graphics,System.Int32,System.Int32,System.Int32)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2011-04-16 21:46:51Z" FixCategory="DependsOnFix">
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\User Controls" File="Ruler.vb" Line="129">In method 'Ruler.DrawTick(Graphics, Integer, Integer, Integer)', call System.IDisposable.Dispose on object 'New Pen(Me._Pen, 1!)' before all references to it are out of scope.</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\User Controls" File="Ruler.vb" Line="131">In method 'Ruler.DrawTick(Graphics, Integer, Integer, Integer)', call System.IDisposable.Dispose on object 'New Pen(Me._Pen, 1!)' before all references to it are out of scope.</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\User Controls" File="Ruler.vb" Line="134">In method 'Ruler.DrawTick(Graphics, Integer, Integer, Integer)', call System.IDisposable.Dispose on object 'New Pen(Me._Pen, 1!)' before all references to it are out of scope.</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\User Controls" File="Ruler.vb" Line="136">In method 'Ruler.DrawTick(Graphics, Integer, Integer, Integer)', call System.IDisposable.Dispose on object 'New Pen(Me._Pen, 1!)' before all references to it are out of scope.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="ScreenCap" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#CaptureDeskTopRectangle(System.Drawing.Rectangle,System.Int32,System.Int32)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2011-04-16 21:46:51Z" FixCategory="DependsOnFix">
+             <Issue Name="ExceptionEdge" Certainty="75" Level="Warning" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\ClassFiles" File="ScreenCap.vb" Line="61">In method 'ScreenCap.CaptureDeskTopRectangle(Rectangle, Integer, Integer)', object 'bmpCrop' is not disposed along all exception paths. Call System.IDisposable.Dispose on object 'bmpCrop' before all references to it are out of scope.</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\ClassFiles" File="ScreenCap.vb" Line="60">In method 'ScreenCap.CaptureDeskTopRectangle(Rectangle, Integer, Integer)', call System.IDisposable.Dispose on object 'bmpImage' before all references to it are out of scope.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="ScreenCap+GDI32" Kind="Class" Accessibility="Private" ExternallyVisible="False">
+         <Members>
+          <Member Name="#BitBlt(System.IntPtr,System.Int32,System.Int32,System.Int32,System.Int32,System.IntPtr,System.Int32,System.Int32,System.Int32)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2011-04-16 21:46:51Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalWarning">Because it is a P/Invoke method, 'ScreenCap.GDI32.BitBlt(IntPtr, Integer, Integer, Integer, Integer, IntPtr, Integer, Integer, Integer)' should be defined in a class named NativeMethods, SafeNativeMethods, or UnsafeNativeMethods.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#CreateCompatibleBitmap(System.IntPtr,System.Int32,System.Int32)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2011-04-16 21:46:51Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalWarning">Because it is a P/Invoke method, 'ScreenCap.GDI32.CreateCompatibleBitmap(IntPtr, Integer, Integer)' should be defined in a class named NativeMethods, SafeNativeMethods, or UnsafeNativeMethods.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#CreateCompatibleDC(System.IntPtr)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2011-04-16 21:46:51Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalWarning">Because it is a P/Invoke method, 'ScreenCap.GDI32.CreateCompatibleDC(IntPtr)' should be defined in a class named NativeMethods, SafeNativeMethods, or UnsafeNativeMethods.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#DeleteDC(System.IntPtr)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2011-04-16 21:46:51Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalWarning">Because it is a P/Invoke method, 'ScreenCap.GDI32.DeleteDC(IntPtr)' should be defined in a class named NativeMethods, SafeNativeMethods, or UnsafeNativeMethods.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#DeleteObject(System.IntPtr)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2011-04-16 21:46:51Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalWarning">Because it is a P/Invoke method, 'ScreenCap.GDI32.DeleteObject(IntPtr)' should be defined in a class named NativeMethods, SafeNativeMethods, or UnsafeNativeMethods.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#SelectObject(System.IntPtr,System.IntPtr)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2011-04-16 21:46:51Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalWarning">Because it is a P/Invoke method, 'ScreenCap.GDI32.SelectObject(IntPtr, IntPtr)' should be defined in a class named NativeMethods, SafeNativeMethods, or UnsafeNativeMethods.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="ScreenCap+User32" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#GetDesktopWindow()" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2011-04-16 21:46:51Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalWarning">Because it is a P/Invoke method, 'ScreenCap.User32.GetDesktopWindow()' should be defined in a class named NativeMethods, SafeNativeMethods, or UnsafeNativeMethods.</Issue>
+            </Message>
+            <Message TypeName="PInvokesShouldNotBeVisible" Category="Microsoft.Interoperability" CheckId="CA1401" Status="Active" Created="2011-04-16 21:46:51Z" FixCategory="Breaking">
+             <Issue Certainty="50" Level="CriticalError">Change the accessibility of P/Invoke 'ScreenCap.User32.GetDesktopWindow()' so that it is no longer visible from outside its assembly.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GetWindowDC(System.IntPtr)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2011-04-16 21:46:51Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalWarning">Because it is a P/Invoke method, 'ScreenCap.User32.GetWindowDC(IntPtr)' should be defined in a class named NativeMethods, SafeNativeMethods, or UnsafeNativeMethods.</Issue>
+            </Message>
+            <Message TypeName="PInvokesShouldNotBeVisible" Category="Microsoft.Interoperability" CheckId="CA1401" Status="Active" Created="2011-04-16 21:46:51Z" FixCategory="Breaking">
+             <Issue Certainty="50" Level="CriticalError">Change the accessibility of P/Invoke 'ScreenCap.User32.GetWindowDC(IntPtr)' so that it is no longer visible from outside its assembly.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GetWindowRect(System.IntPtr,Xtravo.ScreenCap+User32+RECT&amp;)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2011-04-16 21:46:51Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalWarning">Because it is a P/Invoke method, 'ScreenCap.User32.GetWindowRect(IntPtr, ByRef ScreenCap.User32.RECT)' should be defined in a class named NativeMethods, SafeNativeMethods, or UnsafeNativeMethods.</Issue>
+            </Message>
+            <Message TypeName="PInvokesShouldNotBeVisible" Category="Microsoft.Interoperability" CheckId="CA1401" Status="Active" Created="2011-04-16 21:46:51Z" FixCategory="Breaking">
+             <Issue Certainty="50" Level="CriticalError">Change the accessibility of P/Invoke 'ScreenCap.User32.GetWindowRect(IntPtr, ByRef ScreenCap.User32.RECT)' so that it is no longer visible from outside its assembly.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#ReleaseDC(System.IntPtr,System.IntPtr)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2011-04-16 21:46:51Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalWarning">Because it is a P/Invoke method, 'ScreenCap.User32.ReleaseDC(IntPtr, IntPtr)' should be defined in a class named NativeMethods, SafeNativeMethods, or UnsafeNativeMethods.</Issue>
+            </Message>
+            <Message TypeName="PInvokesShouldNotBeVisible" Category="Microsoft.Interoperability" CheckId="CA1401" Status="Active" Created="2011-04-16 21:46:51Z" FixCategory="Breaking">
+             <Issue Certainty="50" Level="CriticalError">Change the accessibility of P/Invoke 'ScreenCap.User32.ReleaseDC(IntPtr, IntPtr)' so that it is no longer visible from outside its assembly.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="TabControl" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#pnlTop_Paint(System.Object,System.Windows.Forms.PaintEventArgs)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2011-04-16 21:46:51Z" FixCategory="DependsOnFix">
+             <Issue Name="ExceptionEdge" Certainty="75" Level="Warning" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\MDITabs" File="TabControl.vb" Line="1623">In method 'TabControl.pnlTop_Paint(Object, PaintEventArgs)', object 'Brush' is not disposed along all exception paths. Call System.IDisposable.Dispose on object 'Brush' before all references to it are out of scope.</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\MDITabs" File="TabControl.vb" Line="1625">In method 'TabControl.pnlTop_Paint(Object, PaintEventArgs)', call System.IDisposable.Dispose on object 'Pen' before all references to it are out of scope.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="TabControl+TabPageCollection" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#Add(System.Windows.Forms.Form)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2011-04-16 21:46:51Z" FixCategory="DependsOnFix">
+             <Issue Name="ExceptionEdge" Certainty="75" Level="Warning" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\MDITabs" File="TabControl.vb" Line="158">In method 'TabControl.TabPageCollection.Add(Form)', object 'TabPage' is not disposed along all exception paths. Call System.IDisposable.Dispose on object 'TabPage' before all references to it are out of scope.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="TabPage" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#CalculateWidth()" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2011-04-16 21:46:51Z" FixCategory="DependsOnFix">
+             <Issue Name="ExceptionEdge" Certainty="75" Level="Warning" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\MDITabs" File="TabPage.vb" Line="717">In method 'TabPage.CalculateWidth()', object 'f' is not disposed along all exception paths. Call System.IDisposable.Dispose on object 'f' before all references to it are out of scope.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#DestroyIcon(System.IntPtr)" Kind="Method" Static="True" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2011-04-16 21:46:51Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalWarning">Because it is a P/Invoke method, 'TabPage.DestroyIcon(IntPtr)' should be defined in a class named NativeMethods, SafeNativeMethods, or UnsafeNativeMethods.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#DrawCloseButton(System.Drawing.Graphics)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="DoNotIndirectlyExposeMethodsWithLinkDemands" Category="Microsoft.Security" CheckId="CA2122" Status="Active" Created="2011-04-16 21:46:51Z" FixCategory="NonBreaking">
+             <Issue Certainty="33" Level="CriticalError" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\MDITabs" File="TabPage.vb" Line="623">'TabPage.DrawCloseButton(Graphics)' calls into 'Bitmap.GetHicon()' which has a LinkDemand. By making this call, 'Bitmap.GetHicon()' is indirectly exposed to user code. Review the following call stack that might expose a way to circumvent security protection: &#xD;&#xA;   -&gt;'TabPage.DrawCloseButton(Graphics)'&#xD;&#xA;   -&gt;'TabPage.DrawCloseButton(Graphics)'&#xD;&#xA;   -&gt;'TabPage.OnPaint(PaintEventArgs)'</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#DrawIcon(System.Drawing.Graphics)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2011-04-16 21:46:51Z" FixCategory="DependsOnFix">
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\MDITabs" File="TabPage.vb" Line="609">In method 'TabPage.DrawIcon(Graphics)', call System.IDisposable.Dispose on object 'i' before all references to it are out of scope.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#DrawText(System.Drawing.Graphics)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2011-04-16 21:46:51Z" FixCategory="DependsOnFix">
+             <Issue Name="ExceptionEdge" Certainty="75" Level="Warning" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\MDITabs" File="TabPage.vb" Line="591">In method 'TabPage.DrawText(Graphics)', object 'MyFormat' is not disposed along all exception paths. Call System.IDisposable.Dispose on object 'MyFormat' before all references to it are out of scope.</Issue>
+             <Issue Name="ExceptionEdge" Certainty="75" Level="Warning" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\MDITabs" File="TabPage.vb" Line="589">In method 'TabPage.DrawText(Graphics)', object 'b' is not disposed along all exception paths. Call System.IDisposable.Dispose on object 'b' before all references to it are out of scope.</Issue>
+             <Issue Name="ExceptionEdge" Certainty="75" Level="Warning" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\MDITabs" File="TabPage.vb" Line="588">In method 'TabPage.DrawText(Graphics)', object 'f' is not disposed along all exception paths. Call System.IDisposable.Dispose on object 'f' before all references to it are out of scope.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GetButton()" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2011-04-16 21:46:51Z" FixCategory="DependsOnFix">
+             <Issue Name="ExceptionEdge" Certainty="75" Level="Warning" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\MDITabs" File="TabPage.vb" Line="682">In method 'TabPage.GetButton()', object 'B' is not disposed along all exception paths. Call System.IDisposable.Dispose on object 'B' before all references to it are out of scope.</Issue>
+             <Issue Name="ExceptionEdge" Certainty="75" Level="Warning" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\MDITabs" File="TabPage.vb" Line="657">In method 'TabPage.GetButton()', object 'gp' is not disposed along all exception paths. Call System.IDisposable.Dispose on object 'gp' before all references to it are out of scope.</Issue>
+             <Issue Name="ExceptionEdge" Certainty="75" Level="Warning" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\MDITabs" File="TabPage.vb" Line="663">In method 'TabPage.GetButton()', object 'm' is not disposed along all exception paths. Call System.IDisposable.Dispose on object 'm' before all references to it are out of scope.</Issue>
+             <Issue Name="ExceptionEdge" Certainty="75" Level="Warning" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\MDITabs" File="TabPage.vb" Line="689">In method 'TabPage.GetButton()', object 'p' is not disposed along all exception paths. Call System.IDisposable.Dispose on object 'p' before all references to it are out of scope.</Issue>
+             <Issue Name="ExceptionEdge" Certainty="75" Level="Warning" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\MDITabs" File="TabPage.vb" Line="697">In method 'TabPage.GetButton()', object 'p' is not disposed along all exception paths. Call System.IDisposable.Dispose on object 'p' before all references to it are out of scope.</Issue>
+             <Issue Name="ExceptionEdge" Certainty="75" Level="Warning" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\MDITabs" File="TabPage.vb" Line="699">In method 'TabPage.GetButton()', object 'sb' is not disposed along all exception paths. Call System.IDisposable.Dispose on object 'sb' before all references to it are out of scope.</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\MDITabs" File="TabPage.vb" Line="687">In method 'TabPage.GetButton()', call System.IDisposable.Dispose on object 'l' before all references to it are out of scope.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Icon" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Accessors>
+            <Accessor Name="#set_Icon(System.Drawing.Icon)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+             <Messages>
+              <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2011-04-16 21:46:51Z" FixCategory="DependsOnFix">
+               <Issue Name="ExceptionEdge" Certainty="75" Level="Warning" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\MDITabs" File="TabPage.vb" Line="495">In method 'TabPage.Icon.Set(Icon)', object 'r' is not disposed along all exception paths. Call System.IDisposable.Dispose on object 'r' before all references to it are out of scope.</Issue>
+              </Message>
+             </Messages>
+            </Accessor>
+           </Accessors>
+          </Member>
+          <Member Name="#MirrorPath(System.Drawing.Drawing2D.GraphicsPath)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2011-04-16 21:46:51Z" FixCategory="DependsOnFix">
+             <Issue Name="ExceptionEdge" Certainty="75" Level="Warning" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\MDITabs" File="TabPage.vb" Line="744">In method 'TabPage.MirrorPath(GraphicsPath)', object 'm' is not disposed along all exception paths. Call System.IDisposable.Dispose on object 'm' before all references to it are out of scope.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#OnPaint(System.Windows.Forms.PaintEventArgs)" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2011-04-16 21:46:51Z" FixCategory="DependsOnFix">
+             <Issue Name="ExceptionEdge" Certainty="75" Level="Warning" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\MDITabs" File="TabPage.vb" Line="761">In method 'TabPage.OnPaint(PaintEventArgs)', object 'GraphicPath' is not disposed along all exception paths. Call System.IDisposable.Dispose on object 'GraphicPath' before all references to it are out of scope.</Issue>
+             <Issue Name="ExceptionEdge" Certainty="75" Level="Warning" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\MDITabs" File="TabPage.vb" Line="804">In method 'TabPage.OnPaint(PaintEventArgs)', object 'M1' is not disposed along all exception paths. Call System.IDisposable.Dispose on object 'M1' before all references to it are out of scope.</Issue>
+             <Issue Name="ExceptionEdge" Certainty="75" Level="Warning" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\MDITabs" File="TabPage.vb" Line="805">In method 'TabPage.OnPaint(PaintEventArgs)', object 'M2' is not disposed along all exception paths. Call System.IDisposable.Dispose on object 'M2' before all references to it are out of scope.</Issue>
+             <Issue Name="ExceptionEdge" Certainty="75" Level="Warning" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\MDITabs" File="TabPage.vb" Line="806">In method 'TabPage.OnPaint(PaintEventArgs)', object 'M3' is not disposed along all exception paths. Call System.IDisposable.Dispose on object 'M3' before all references to it are out of scope.</Issue>
+             <Issue Name="ExceptionEdge" Certainty="75" Level="Warning" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\MDITabs" File="TabPage.vb" Line="800">In method 'TabPage.OnPaint(PaintEventArgs)', object 'R' is not disposed along all exception paths. Call System.IDisposable.Dispose on object 'R' before all references to it are out of scope.</Issue>
+             <Issue Name="ExceptionEdge" Certainty="75" Level="Warning" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\MDITabs" File="TabPage.vb" Line="801">In method 'TabPage.OnPaint(PaintEventArgs)', object 'R1' is not disposed along all exception paths. Call System.IDisposable.Dispose on object 'R1' before all references to it are out of scope.</Issue>
+             <Issue Name="ExceptionEdge" Certainty="75" Level="Warning" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\MDITabs" File="TabPage.vb" Line="802">In method 'TabPage.OnPaint(PaintEventArgs)', object 'R2' is not disposed along all exception paths. Call System.IDisposable.Dispose on object 'R2' before all references to it are out of scope.</Issue>
+             <Issue Name="ExceptionEdge" Certainty="75" Level="Warning" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\MDITabs" File="TabPage.vb" Line="803">In method 'TabPage.OnPaint(PaintEventArgs)', object 'R3' is not disposed along all exception paths. Call System.IDisposable.Dispose on object 'R3' before all references to it are out of scope.</Issue>
+             <Issue Name="ExceptionEdge" Certainty="75" Level="Warning" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\MDITabs" File="TabPage.vb" Line="834">In method 'TabPage.OnPaint(PaintEventArgs)', object 'p' is not disposed along all exception paths. Call System.IDisposable.Dispose on object 'p' before all references to it are out of scope.</Issue>
+             <Issue Name="ExceptionEdge" Certainty="75" Level="Warning" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\MDITabs" File="TabPage.vb" Line="838">In method 'TabPage.OnPaint(PaintEventArgs)', object 'p1' is not disposed along all exception paths. Call System.IDisposable.Dispose on object 'p1' before all references to it are out of scope.</Issue>
+             <Issue Name="ExceptionEdge" Certainty="75" Level="Warning" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\MDITabs" File="TabPage.vb" Line="822">In method 'TabPage.OnPaint(PaintEventArgs)', object 'te' is not disposed along all exception paths. Call System.IDisposable.Dispose on object 'te' before all references to it are out of scope.</Issue>
+             <Issue Name="ExceptionEdge" Certainty="75" Level="Warning" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\MDITabs" File="TabPage.vb" Line="829">In method 'TabPage.OnPaint(PaintEventArgs)', object 'te' is not disposed along all exception paths. Call System.IDisposable.Dispose on object 'te' before all references to it are out of scope.</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\MDITabs" File="TabPage.vb" Line="845">In method 'TabPage.OnPaint(PaintEventArgs)', call System.IDisposable.Dispose on object 'New Pen(RenderBottomColor)' before all references to it are out of scope.</Issue>
+            </Message>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2011-04-16 21:46:51Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\MDITabs" File="TabPage.vb" Line="862">Object 'te' can be disposed more than once in method 'TabPage.OnPaint(PaintEventArgs)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 862</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Tab_MouseMove(System.Object,System.Windows.Forms.MouseEventArgs)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2011-04-16 21:46:51Z" FixCategory="DependsOnFix">
+             <Issue Name="ExceptionEdge" Certainty="75" Level="Warning" Path="F:\Jawo\Browser Project\Xtravo Explorer Project\Xtravo 4\Ie7Clone\MDITabs" File="TabPage.vb" Line="572">In method 'TabPage.Tab_MouseMove(Object, MouseEventArgs)', object 'r' is not disposed along all exception paths. Call System.IDisposable.Dispose on object 'r' before all references to it are out of scope.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="tFileInfo" Kind="Class" Accessibility="Assembly" ExternallyVisible="False">
+         <Members>
+          <Member Name="#ShellExecuteEx(Xtravo.tFileInfo+SHELLEXECUTEINFO&amp;)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2011-04-16 21:46:51Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalWarning">Because it is a P/Invoke method, 'tFileInfo.ShellExecuteEx(ByRef tFileInfo.SHELLEXECUTEINFO)' should be defined in a class named NativeMethods, SafeNativeMethods, or UnsafeNativeMethods.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="tlxIni" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#FlushPrivateProfileString(System.Int32,System.Int32,System.Int32,System.String&amp;)" Kind="Method" Static="True" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2011-04-16 21:46:51Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalWarning">Because it is a P/Invoke method, 'tlxIni.FlushPrivateProfileString(Integer, Integer, Integer, ByRef String)' should be defined in a class named NativeMethods, SafeNativeMethods, or UnsafeNativeMethods.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GetPrivateProfileInt(System.String&amp;,System.String&amp;,System.Int32,System.String&amp;)" Kind="Method" Static="True" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2011-04-16 21:46:51Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalWarning">Because it is a P/Invoke method, 'tlxIni.GetPrivateProfileInt(ByRef String, ByRef String, Integer, ByRef String)' should be defined in a class named NativeMethods, SafeNativeMethods, or UnsafeNativeMethods.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GetPrivateProfileString(System.String&amp;,System.String&amp;,System.String&amp;,System.Text.StringBuilder,System.Int32,System.String&amp;)" Kind="Method" Static="True" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2011-04-16 21:46:51Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalWarning">Because it is a P/Invoke method, 'tlxIni.GetPrivateProfileString(ByRef String, ByRef String, ByRef String, StringBuilder, Integer, ByRef String)' should be defined in a class named NativeMethods, SafeNativeMethods, or UnsafeNativeMethods.</Issue>
+            </Message>
+            <Message Id="3" TypeName="SpecifyMarshalingForPInvokeStringArguments" Category="Microsoft.Globalization" CheckId="CA2101" Status="Active" Created="2011-04-16 21:46:51Z" FixCategory="NonBreaking">
+             <Issue Name="ParameterImplicitAnsi" Certainty="75" Level="Error">To reduce security risk, marshal parameter 'lpReturnedString' as Unicode, by setting DllImport.CharSet to CharSet.Unicode, or by explicitly marshaling the parameter as UnmanagedType.LPWStr. If you need to marshal this string as ANSI or system-dependent, specify MarshalAs explicitly, and set BestFitMapping=false; for added security, also set ThrowOnUnmappableChar=true.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#WritePrivateProfileString(System.String&amp;,System.String&amp;,System.String&amp;,System.String&amp;)" Kind="Method" Static="True" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2011-04-16 21:46:51Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalWarning">Because it is a P/Invoke method, 'tlxIni.WritePrivateProfileString(ByRef String, ByRef String, ByRef String, ByRef String)' should be defined in a class named NativeMethods, SafeNativeMethods, or UnsafeNativeMethods.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+     </Namespaces>
+    </Module>
+   </Modules>
+  </Target>
+ </Targets>
+ <Rules>
+  <Rule TypeName="ComVisibleTypeBaseTypesShouldBeComVisible" Category="Microsoft.Interoperability" CheckId="CA1405">
+   <Name>COM visible type base types should be COM visible</Name>
+   <Description>COM visible types should have an object hierarchy that is uniformly COM visible.</Description>
+   <Resolution Name="Default">{0} is marked ComVisible(true) but has the following ComVisible(false) types in its object hierarchy: {1}</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182202(VS.100).aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="90">Error</MessageLevel>
+   <File Name="interoperabilityrules.dll" Version="10.0.0.0" />
+  </Rule>
+  <Rule TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000">
+   <Name>Dispose objects before losing scope</Name>
+   <Description>If a disposable object is not explicitly disposed before all references to it are out of scope, the object will be disposed at some indeterminate time when the garbage collector runs the finalizer of the object. Because an exceptional event might occur that will prevent the finalizer of the object from running, the object should be explicitly disposed instead.</Description>
+   <Resolution Name="ExceptionEdge">In method {0}, object {1} is not disposed along all exception paths. Call System.IDisposable.Dispose on object {1} before all references to it are out of scope.</Resolution>
+   <Resolution Name="NonExceptionEdge">In method {0}, call System.IDisposable.Dispose on object {1} before all references to it are out of scope.</Resolution>
+   <Owner>RuleOwner</Owner>
+   <Url>http://msdn.microsoft.com/library/ms182289(VS.100).aspx</Url>
+   <Email />
+   <MessageLevel Certainty="75">Warning</MessageLevel>
+   <File Name="dataflowrules.dll" Version="10.0.0.0" />
+  </Rule>
+  <Rule TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202">
+   <Name>Do not dispose objects multiple times</Name>
+   <Description>A correctly implemented Dispose method can be called multiple times without throwing an exception. However, this is not guaranteed and to avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.</Description>
+   <Resolution Name="Default">Object {0} can be disposed more than once in method {1}. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 862</Resolution>
+   <Owner>RuleOwner</Owner>
+   <Url>http://msdn.microsoft.com/library/ms182334(VS.100).aspx</Url>
+   <Email />
+   <MessageLevel Certainty="75">Warning</MessageLevel>
+   <File Name="dataflowrules.dll" Version="10.0.0.0" />
+  </Rule>
+  <Rule TypeName="DoNotIndirectlyExposeMethodsWithLinkDemands" Category="Microsoft.Security" CheckId="CA2122">
+   <Name>Do not indirectly expose methods with link demands</Name>
+   <Description>Do not wrap a method protected by a LinkDemand with a method that does not perform a security check. A LinkDemand checks the permissions of the immediate caller rather than checking the permissions of all callers in the call stack. In this case, the permissions of the wrapper method will be checked. If the wrapper method does not, itself, check the permissions of callers higher in the call stack, malicious code might be able to execute the wrapped function even though it lacks permission to do so.</Description>
+   <Resolution Name="Default">{0} calls into {1} which has a LinkDemand. By making this call, {1} is indirectly exposed to user code. Review the following call stack that might expose a way to circumvent security protection: {2}</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182303(VS.100).aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="33">CriticalError</MessageLevel>
+   <File Name="securityrules.dll" Version="10.0.0.0" />
+  </Rule>
+  <Rule TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060">
+   <Name>Move P/Invokes to NativeMethods class</Name>
+   <Description>This type contains members with the DllImport attribute. Members with the DllImport attribute should be contained in classes named NativeMethods, SafeNativeMethods, or UnsafeNativeMethods.</Description>
+   <Resolution Name="Default">Because it is a P/Invoke method, {0} should be defined in a class named NativeMethods, SafeNativeMethods, or UnsafeNativeMethods.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182161(VS.100).aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">CriticalWarning</MessageLevel>
+   <File Name="designrules.dll" Version="10.0.0.0" />
+  </Rule>
+  <Rule TypeName="PInvokesShouldNotBeVisible" Category="Microsoft.Interoperability" CheckId="CA1401">
+   <Name>P/Invokes should not be visible</Name>
+   <Description>Interop layer should not be public. The DllImport attribute should not be applied to publicly accessible members (public or protected).</Description>
+   <Resolution Name="Default">Change the accessibility of P/Invoke {0} so that it is no longer visible from outside its assembly.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182209(VS.100).aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="50">CriticalError</MessageLevel>
+   <File Name="interoperabilityrules.dll" Version="10.0.0.0" />
+  </Rule>
+  <Rule TypeName="PointersShouldNotBeVisible" Category="Microsoft.Security" CheckId="CA2111">
+   <Name>Pointers should not be visible</Name>
+   <Description>IntPtr and UIntPtr fields should be declared as private. Exposing non-private pointers can cause a security weakness.</Description>
+   <Resolution Name="Default">Make {0} private.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182306(VS.100).aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="75">CriticalError</MessageLevel>
+   <File Name="securityrules.dll" Version="10.0.0.0" />
+  </Rule>
+  <Rule TypeName="Review SQL queries for security vulnerabilities" Category="Microsoft.Security" CheckId="CA2100">
+   <Name>Review SQL queries for security vulnerabilities</Name>
+   <Description>A SQL command string built from user input is vulnerable to SQL injection attacks. Microsoft SQL Server and other database servers support stored procedures and parameterized SQL queries, which reduce the risk of injection attacks.</Description>
+   <Resolution Name="WithNonLiterals">The query string passed to {0} in {1} could contain the following variables {2}. If any of these variables could come from user input, consider using a stored procedure or a parameterized SQL query instead of building the query with string concatenations.</Resolution>
+   <Owner>RuleOwner</Owner>
+   <Url>http://msdn.microsoft.com/library/ms182310(VS.100).aspx</Url>
+   <Email />
+   <MessageLevel Certainty="75">Warning</MessageLevel>
+   <File Name="dataflowrules.dll" Version="10.0.0.0" />
+  </Rule>
+  <Rule TypeName="SecuredTypesShouldNotExposeFields" Category="Microsoft.Security" CheckId="CA2112">
+   <Name>Secured types should not expose fields</Name>
+   <Description>Fields must be secured with a security check other than LinkDemand.</Description>
+   <Resolution Name="Default">{0} has a LinkDemand or Demand, and exposes the field {1}. Fields cannot be protected by LinkDemands or Demands. To remove this vulnerability, make the field private and expose a property that has security applied to it.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182318(VS.100).aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="75">CriticalError</MessageLevel>
+   <File Name="securityrules.dll" Version="10.0.0.0" />
+  </Rule>
+  <Rule TypeName="SpecifyMarshalingForPInvokeStringArguments" Category="Microsoft.Globalization" CheckId="CA2101">
+   <Name>Specify marshaling for P/Invoke string arguments</Name>
+   <Description>When marshaling strings as ANSI (or as Auto on Win9x), some characters may be changed. If best-fit mapping is on, strings that appear different in Unicode will be marshaled to identical ANSI strings, which may lead to incorrect security decisions. Turning best-fit mapping off reduces this risk, as all characters without equivalents are mapped to '?'. Also, note that CharSet.Ansi is the default setting for all string marshaling; Unicode marshaling must be specified explicitly, either as a CharSet setting of DllImport or StructLayout, or as a MarshalAs attribute with a Unicode (or system-dependent) UnmanagedType.</Description>
+   <Resolution Name="Parameter">To reduce security risk, marshal parameter {0} as Unicode, by setting DllImport.CharSet to CharSet.Unicode, or by explicitly marshaling the parameter as UnmanagedType.LPWStr. If you need to marshal this string as ANSI or system-dependent, set BestFitMapping=false; for added security, also set ThrowOnUnmappableChar=true.</Resolution>
+   <Resolution Name="ParameterImplicitAnsi">To reduce security risk, marshal parameter {0} as Unicode, by setting DllImport.CharSet to CharSet.Unicode, or by explicitly marshaling the parameter as UnmanagedType.LPWStr. If you need to marshal this string as ANSI or system-dependent, specify MarshalAs explicitly, and set BestFitMapping=false; for added security, also set ThrowOnUnmappableChar=true.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182319(VS.100).aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="75">Error</MessageLevel>
+   <File Name="globalizationrules.dll" Version="10.0.0.0" />
+  </Rule>
+  <Rule TypeName="ValueTypeFieldsShouldBePortable" Category="Microsoft.Portability" CheckId="CA1900">
+   <Name>Value type fields should be portable</Name>
+   <Description>Structures with explicit layout containing misaligned fields cause crashes on 64-bit platforms.</Description>
+   <Resolution Name="Default">Structure {0} contains the following non-portable fields: {1}.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182285(VS.100).aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">CriticalError</MessageLevel>
+   <File Name="portabilityrules.dll" Version="10.0.0.0" />
+  </Rule>
+ </Rules>
+ <Localized>
+  <String Key="Category">Category</String>
+  <String Key="Certainty">Certainty</String>
+  <String Key="CollapseAll">Collapse All</String>
+  <String Key="CheckId">Check Id</String>
+  <String Key="Error">Error</String>
+  <String Key="Errors">error(s)</String>
+  <String Key="ExpandAll">Expand All</String>
+  <String Key="Help">Help</String>
+  <String Key="Line">Line</String>
+  <String Key="Messages">message(s)</String>
+  <String Key="LocationNotStoredInPdb">[Location not stored in Pdb]</String>
+  <String Key="Project">Project</String>
+  <String Key="Resolution">Resolution</String>
+  <String Key="Rule">Rule</String>
+  <String Key="RuleFile">Rule File</String>
+  <String Key="RuleDescription">Rule Description</String>
+  <String Key="Source">Source</String>
+  <String Key="Status">Status</String>
+  <String Key="Target">Target</String>
+  <String Key="Warning">Warning</String>
+  <String Key="Warnings">warning(s)</String>
+  <String Key="ReportTitle">Code Analysis Report</String>
+ </Localized>
+</FxCopReport>

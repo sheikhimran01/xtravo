@@ -1,0 +1,49 @@
+<html>
+<head>
+<title>Example Browser - Start Page</title>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="purple" alink="red">
+<p align="center"><font face="Tahoma" size="4"><b>Working with the WebBrowser Control 
+in Visual Studio 2005.<br></b></font></p>
+<p align="center"><font face="Tahoma" size="2"><b>1st</b></font><font face="Tahoma"><b>: </b></font><font face="Tahoma" size="2"><b>Please 
+vote for this example on the site you found it on if you find it useful.</b></font></p>
+<p align="center"><font face="Tahoma" size="2">The article and example application is provided 
+as-is.</font></p>
+<p><font face="Tahoma" size="2">Goal: To demonstrate working with the browser 
+control by providing a &quot;clone&quot; of Microsoft's</font><font face="Tahoma" size="1">©</font><font face="Tahoma" size="2"> 
+Internet Explorer</font><font face="Tahoma" size="1">®</font><font face="Tahoma" size="2"> 
+7 web browser.</font></p>
+<p><font face="Tahoma" size="2">Code Project Website link: <a href="http://www.codeproject.com/vb/net/IE7_Clone_VS2005_Browser.asp">Click 
+Here</a></font></p>
+<p><font face="Tahoma" size="2">Link Example for article section: <br></font><font color="#FF9900" face="Tahoma"><b>JavaScript Document.External... 
+</b></font><font color="#FF9900" face="Tahoma" size="2"><a href="#" onClick="window.external.ShowCalc">ShowCalculator</a></font></p>
+<H2><font color="#FF9900" face="Tahoma">Introduction</font></H2>
+<P><font face="Tahoma" size="2">As many people know Microsoft has included a browser control with Visual Studio 2005. </font></P>
+<P><font face="Tahoma" size="2">The browser control is a managed wrapper around the internet explorer control found in earlier versions of visual studio (</font><I><font face="Tahoma" size="2">SHDocVW.DLL</font></I><font face="Tahoma" size="2">) and it exposes some functionality that was not always easy to get at, while at the same time leaving out some functionality that would have made the control truly great to work with.</font></P>
+<P><font face="Tahoma" size="2">The goal of this article and accompanying sample application is to show working with the new </font><CODE><font face="Tahoma" size="2">WebBrowser </font></CODE><font face="Tahoma" size="2">Control in Visual Studio 2005 
+by cloneing many of the features in Internet Explorer 7. It is not meant to replace your existing browser or be a 100% complete implementation of a browser, The features implemented are to show examples of working with various properties 
+and events of the control and some idea's on what to do to write your own complete browser application. Every feature is not 
+fully error checked as this is meant to be a &quot;starting point&quot; for working with the control and every user interaction possibility has not been addressed. That said with minimal effort you could make this example a complete browser based application. You will find some tips in the comments for certain events and routines on how to improve or use that routine in your own applications as well as some &quot;stubs&quot; such as download manager, phishing 
+filter, rss reader, Document Explorer, Image Grabber etc.</font></P>
+<P><font face="Tahoma" size="2">This example was put together with out referencing the Active X (</font><I><font face="Tahoma" size="2">SHDocVW.DLL</font></I><font face="Tahoma" size="2">) directly. That said, It again needs to be pointed out that the browser control is a managed wrapper around the internet explorer control found in earlier versions of visual studio (</font><I><font face="Tahoma" size="2">SHDocVW.DLL</font></I><font face="Tahoma" size="2">) and you may find a mix of the 2 will best suit your purposes.</font></P>
+<p><font face="Tahoma" size="2"><b>Credits:</b></font></p>
+<ul>
+    <li><font face="Tahoma" size="2">The tab control used in the project was 
+    developed by: </font><font size="2" face="Tahoma">Eduardo Oliveira</font></li>
+    <ul>
+        <li><font face="Tahoma" size="2">You can find the original article and 
+        code example for the tab control <a href="http://www.codeproject.com/vb/net/MDITabControl.asp">here.</a></font></li>
+    </ul>
+    <li><font face="Tahoma" size="2">Several features in the example application 
+    were adopted from articles found on the <a href="http://www.msdn.com">MSDN 
+    website</a>.</font></li>
+</ul>
+<p><font face="Tahoma" size="2">&nbsp;</font></p>
+<p align="center"><font face="Tahoma" size="2">&nbsp;</font></p>
+<p align="center"><font face="Tahoma" size="2">Copyright 2007 - Thomas Maxwell<br>tmaxwell07@yahoo.com</font></p>
+<p><font face="Tahoma" size="2">&nbsp;</font></p>
+</body>
+
+</html>
+
