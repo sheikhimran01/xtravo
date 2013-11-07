@@ -12,3 +12,7 @@ Xtravo to date as been on .NET and using Trident engine. I request developers ar
 
 Newer version will be available on Xtravo's website for users.
 
+
+Note:
+-----
+If you want to use IE 11 as rendering engine then you need to use registry method in the installer. Same goes for Hardware Acceleration and other features of IE 11.
